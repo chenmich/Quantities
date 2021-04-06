@@ -1,4 +1,4 @@
-from .units import Unit
+from . import units
 
 class metaQuantityType(type):
     def __new__(cls, name, bases, classdict):
@@ -10,7 +10,9 @@ class metaQuantityType(type):
 
 
 class QuantityType(metaclass=metaQuantityType):
-    pri_unit = Unit
+    pri_unit = units.Unit
+    SI_conherent_unit = pri_unit
+    d_unit = units.dUnit
     def regist_type(cls):
         raise NotImplementedError
     
