@@ -7,6 +7,7 @@ from quantities.time import TimeType, s
 
 def test_QuantityType_create():
     assert QuantityType.pri_unit == Unit
+    assert QuantityType.SI_conherent_unit == Unit
 
 def test_create_prefix_unit_for_LengthType():
     assert LengthType.d_unit.__name__ == 'dam'
