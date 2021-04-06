@@ -17,6 +17,7 @@ class metaQuantityType(type):
 
 
 class QuantityType(metaclass=metaQuantityType):
+    source = {}
     pri_unit = units.Unit
     SI_conherent_unit = pri_unit
     da_unit = units.daUnit
