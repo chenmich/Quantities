@@ -10,6 +10,6 @@ def test_QuantityType_create():
 
 def test_create_prefix_unit_for_LengthType():
     assert LengthType.d_unit.__name__ == 'dam'
-    
+def test_create_prefix_unit_for_TimeType():    
     assert TimeType.d_unit.__name__ == 'das'
     
