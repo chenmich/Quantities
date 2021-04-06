@@ -16,6 +16,7 @@ class QuantityType(metaclass=metaQuantityType):
     pri_unit = units.Unit
     SI_conherent_unit = pri_unit
     d_unit = units.dUnit
+    @classmethod
     def regist_type(cls):
         raise NotImplementedError
     
