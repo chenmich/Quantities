@@ -6,8 +6,9 @@ class metaQuantityType(type):
         #create the prefix unit for q_type by it's pri_unit
         if name != 'QuantityType':
             base_da_m = baseType.QuantityType.d_unit
-            da_m = type('dam', (base_da_m,), {})
-            q_type.d_unit = da_m
+            prefix_unit_name = 'da' + q_type.pri_unit.__name__
+            prefix_unit = type(prefix_unit_name, (base_da_m,), {})
+            q_type.d_unit = prefix_unit
             q_type.regist_type()
         return q_type
 
