@@ -8,4 +8,5 @@ def test_QuantityType_create():
     assert QuantityType.pri_unit == Unit
 
 def test_create_prefix_unit_for_LengthType():
-    assert LengthType.d_unit.__name__ == 'dm'
+    assert LengthType.d_unit.__name__ == 'dam'
+    assert LengthType.SI_conherent_unit == LengthType.pri_unit
