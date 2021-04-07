@@ -10,10 +10,10 @@ class Unit():
     prefix = {'name':'', 'symbol':'base'}
     @classmethod
     def from_pri_unit(cls):
-        return __prefix_value__[cls.prefix['symbol']]
+        return 1 /__prefix_value__[cls.prefix['symbol']]
     @classmethod
     def to_pri_unit(cls):
-        return 1 /__prefix_value__[cls.prefix["symbol"]]
+        return __prefix_value__[cls.prefix["symbol"]]
 
 class yUnit(Unit):
     prefix = {'name':'yocto','symbol':'y'}
