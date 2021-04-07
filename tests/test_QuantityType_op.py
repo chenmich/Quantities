@@ -65,4 +65,5 @@ def test_QuantityType_add_substract():
         l_type.add(float)
     with pytest.raises(TypeError):
         l_type.substract(None)
-    
+    assert l_type == l_type.add(l_type)
+    assert l_type == l_type.substract(l_type)

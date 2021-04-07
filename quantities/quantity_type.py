@@ -60,7 +60,11 @@ class QuantityType(metaclass=metaQuantityType):
         return multiplied_type
     @classmethod
     def add(cls, other):
-        raise NotImplementedError
+        if cls != other:
+            raise TypeError("The two type can not be added now!")
+        return cls
     @classmethod
     def substract(cls, other):
-        raise NotImplementedError
+        if cls != other:
+            raise TypeError("The two type can not be substract now!")
+        return cls
