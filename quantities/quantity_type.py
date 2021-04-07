@@ -44,4 +44,17 @@ class QuantityType(metaclass=metaQuantityType):
     @classmethod
     def regist_type(cls):
         raise NotImplementedError
-    
+    @classmethod
+    def divide(cls, other):
+        try:
+            divided_type = cls.source[(cls, '/', other)]
+        except KeyError as exc:
+            raise TypeError("The two qunatity can not be divide now!") from exc
+        return divided_type
+    @classmethod
+    def multiply(cls, other):
+        try:
+            multiplied_type = cls.source[(cls, '*', other)]
+        except KeyError as exc:
+            raise TypeError("The two qunatity can not be multiply now!") from exc
+        return multiplied_type
