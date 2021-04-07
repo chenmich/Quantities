@@ -10,9 +10,18 @@ class Quantity():
         else:
             self.__unit = q_type.SI_conherent_unit
     def add(self, other):
-        raise NotImplementedError
+        if not hasattr(other, 'q_type') or other.q_type != self.q_type:
+            raise ValueError("These two physical quantities can not be added now!")
+        other_by_current_unit = other.to_unit(self.current_unit)
+        value = self.value + other_by_current_unit.value
+        return Quantity(value, self.q_type, unit=self.current_unit).to_unit(self.q_type.SI_conherent_unit)
+        
     def substract(self, other):
-        raise NotImplementedError
+        if not hasattr(other, 'q_type') or other.q_type != self.q_type:
+            raise ValueError('These two physical quantities can not be substracted now! ')
+        other_by_current_unit = other.to_unit(self.current_unit)
+        value = self.value - other_by_current_unit.value
+        return Quantity(value, self.q_type, unit=self.current_unit).to_unit(self.q_type.SI_conherent_unit)
     def multiply(self, other):
         raise NotImplementedError
     def divide(self, other):

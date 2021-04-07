@@ -12,8 +12,8 @@ def test_Quantity_add_substract():
 
     l3 = l1.add(l2)
     assert l3.q_type == l_type
-    assert l3.unit == l_type.SI_conherent_unit
-    assert isclose(l3.value, 2200.033)
+    assert l3.current_unit == l_type.SI_conherent_unit
+    assert isclose(l3.value, 22000.033)
     with pytest.raises(ValueError):
         l1.add(None)
     with pytest.raises(ValueError):
@@ -23,8 +23,8 @@ def test_Quantity_add_substract():
     
     l4 = l1.substract(l2)
     assert l4.q_type == l_type
-    assert l3.unit == l_type.SI_conherent_unit
-    assert isclose(l4.value, 2200-0.033)
+    assert l3.current_unit == l_type.SI_conherent_unit
+    assert isclose(l4.value, 22000-0.033)
     with pytest.raises(ValueError):
         l1.substract(None)
     with pytest.raises(ValueError):
