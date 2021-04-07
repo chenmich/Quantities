@@ -35,6 +35,12 @@ def test_Quantity_to_unit():
     l = length.Length(22000)
     l1 = l.to_unit(l.q_type.k_unit)
 
-    assert l.q_type == l.q_type
+    assert l.q_type == l1.q_type
     assert isclose(l.value /1000, l1.value)
-    assert l.current_unit == l.q_type.k_unit
+    assert l1.current_unit == l.q_type.k_unit
+    with pytest.raises(TypeError):
+        l.to_unit(velocity.VelocityType.k_unit)
+    with pytest.raises(TypeError):
+        l.to_unit(int)
+    with pytest.raises(TypeError):
+        l.to_unit(None)
