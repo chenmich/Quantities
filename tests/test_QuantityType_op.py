@@ -4,7 +4,7 @@ from quantities import length
 from quantities import time
 from quantities import velocity
 
-def test_Quantity_multiply_divide():
+def test_QuantityType_multiply_divide():
     v_type = velocity.VelocityType
     l_type = length.LengthType
     t_type = time.TimeType 
@@ -52,3 +52,8 @@ def test_Quantity_multiply_divide():
         t_type.divide(dict)
     with pytest.raises(TypeError):
         t_type.divide(None)
+
+
+def test_QuantityType_add_substract():
+    raise NotImplementedError
+    
