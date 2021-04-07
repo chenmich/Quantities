@@ -58,3 +58,9 @@ class QuantityType(metaclass=metaQuantityType):
         except KeyError as exc:
             raise TypeError("The two qunatity can not be multiply now!") from exc
         return multiplied_type
+    @classmethod
+    def add(cls, other):
+        raise NotImplementedError
+    @classmethod
+    def substract(cls, other):
+        raise NotImplementedError

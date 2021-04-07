@@ -55,5 +55,14 @@ def test_QuantityType_multiply_divide():
 
 
 def test_QuantityType_add_substract():
-    raise NotImplementedError
+    l_type = length.LengthType
+    v_type = velocity.VelocityType
+    with pytest.raises(TypeError):
+        l_type.add(v_type)
+    with pytest.raises(TypeError):
+        l_type.substract(v_type)
+    with pytest.raises(TypeError):
+        l_type.add(float)
+    with pytest.raises(TypeError):
+        l_type.substract(None)
     
