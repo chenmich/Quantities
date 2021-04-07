@@ -14,5 +14,7 @@ def test_regist_q_type():
     assert divided_type == v_type
     assert multiplied_type == l_type
     assert another_multiplied_type == l_type
+    assert t_type == l_type.divide(v_type)
+
 
     
