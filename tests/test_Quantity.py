@@ -56,5 +56,10 @@ def test_Quantity_create():
         Quantity(32, q_type, velocity.VelocityType.k_unit)
     with pytest.raises(TypeError):
         Quantity(32, q_type, int)
+
+    q1 = Quantity(32, q_type)
+    assert q1.value == 32
+    assert q1.q_type == q_type
+    assert q1.current_unit == q.q_type.SI_conherent_unit
     
     
