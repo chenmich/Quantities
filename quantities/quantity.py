@@ -5,8 +5,10 @@ class Quantity():
     def __init__(self, value:float, q_type:QuantityType, unit=None):
         self.__value = value
         self.__type = q_type
+        if unit not in self.__type.__dict__.values():
+            raise TypeError("The unit is not one of the units of quantity' q_type!")
         if unit != None:
-            self.__unit = unit
+            self.__unit = unit        
         else:
             self.__unit = q_type.SI_conherent_unit
     def add(self, other):

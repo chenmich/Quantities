@@ -53,8 +53,8 @@ def test_Quantity_create():
     assert q.current_unit in length.LengthType.__dict__.values()
 
     with pytest.raises(TypeError):
-        q1 = Quantity(32, q_type, velocity.VelocityType.k_unit)
+        Quantity(32, q_type, velocity.VelocityType.k_unit)
     with pytest.raises(TypeError):
-        q1 = Quantity(32, q_type, int)
+        Quantity(32, q_type, int)
     
     
