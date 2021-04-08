@@ -29,7 +29,6 @@ class Quantity():
     def to_unit(self, unit:Unit):
         if unit not in self.q_type.__dict__.values() or unit == None:
             raise TypeError('The unit is not for this physical qunatity!')
-        
         else:
             to_pri_coffic = self.current_unit.to_pri_unit()
             from_pri_coffic = unit.from_pri_unit()

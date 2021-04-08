@@ -3,6 +3,7 @@ from math import isclose
 
 from quantities import length
 from quantities import velocity
+from quantities.quantity import Quantity
 
 def test_Quantity_add_substract():
     l_type = length.LengthType
@@ -44,3 +45,16 @@ def test_Quantity_to_unit():
         l.to_unit(int)
     with pytest.raises(TypeError):
         l.to_unit(None)
+def test_Quantity_create():
+    q_type = length.LengthType
+    q = Quantity(32, q_type, length.LengthType.k_unit)
+    assert q.value == 32
+    assert q.q_type == q_type
+    assert q.current_unit in length.LengthType.__dict__.values()
+
+    with pytest.raises(TypeError):
+        q1 = Quantity(32, q_type, velocity.VelocityType.k_unit)
+    with pytest.raises(TypeError):
+        q1 = Quantity(32, q_type, int)
+    
+    
