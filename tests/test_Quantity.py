@@ -88,6 +88,25 @@ def test_Quantity_multiply_divide():
         l1.multiply(int)
     with pytest.raises(ValueError):
         l1.multiply(None)
+def test_Quantity_equal():
+    l1 = length.Length(32, length.LengthType.k_unit)
+    l2 = length.Length(32000)
+    l3 = length.Length(32, length.LengthType.k_unit)
+    l4 = length.Length(44)
+    t = time.Time(32)
+    
+    assert l1.equal(l2)
+    assert l1.equal(l3)
+    assert not l1.equal(l4)
+
+    with pytest.raises(TypeError):
+        l1.equal(t)
+    with pytest.raises(ValueError):
+        l1.equal('32000')
+    with pytest.raises(ValueError):
+        l1.equal(None)
+
+    
 
 
     

@@ -14,5 +14,5 @@ class TimeType(QuantityType):
         pass
 
 class Time(Quantity):
-    def __init__(self, value, unit):
+    def __init__(self, value, unit=None):
         super().__init__(value, TimeType, unit)

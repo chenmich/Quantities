@@ -1,3 +1,4 @@
+from math import isclose
 from .quantity_type import QuantityType
 from .units import Unit
 
@@ -57,6 +58,8 @@ class Quantity():
             from_pri_coffic = unit.from_pri_unit()
             value = self.value * to_pri_coffic * from_pri_coffic
             return Quantity(value, self.q_type, unit)
+    def equal(self, other):
+        raise NotImplementedError
 
     @property
     def value(self):
