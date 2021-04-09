@@ -68,14 +68,14 @@ def test_Quantity_multiply_divide():
     v = velocity.Velocity(74) 
     
     v1 = l.divide(t)
-    assert isclose(v1.value, 2e-6)
+    assert isclose(v1.value, 5e-7)
     assert v1.q_type == velocity.VelocityType
     assert v1.current_unit == velocity.VelocityType.SI_conherent_unit
     with pytest.raises(TypeError):
         v1.divide(l)
-    with pytest.raises(TypeError):
+    with pytest.raises(ValueError):
         v1.divide(int)
-    with pytest.raises(TypeError):
+    with pytest.raises(ValueError):
         v1.divide(None)
     
     l1 = v.multiply(t)
@@ -84,9 +84,9 @@ def test_Quantity_multiply_divide():
     assert l1.current_unit == length.LengthType.SI_conherent_unit
     with pytest.raises(TypeError):
         l1.multiply(t)
-    with pytest.raises(TypeError):
+    with pytest.raises(ValueError):
         l1.multiply(int)
-    with pytest.raises(TypeError):
+    with pytest.raises(ValueError):
         l1.multiply(None)
 
 

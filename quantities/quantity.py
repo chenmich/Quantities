@@ -25,9 +25,30 @@ class Quantity():
         value = self.value - other_by_current_unit.value
         return Quantity(value, self.q_type, unit=self.current_unit).to_unit(self.q_type.SI_conherent_unit)
     def multiply(self, other):
-        raise NotImplementedError
+        if not hasattr(other, 'q_type'):
+            raise ValueError("These two physical quantities can not be multiplied not!")
+        else:
+            try:
+                q_type = self.q_type.multiply(other.q_type)
+            except TypeError as exc:
+                raise TypeError("These types of two physical quantities can not be multiplied not!") from exc
+        other_converted = other.to_unit(other.q_type.SI_conherent_unit)
+        self_converted = self.to_unit(self.q_type.SI_conherent_unit)
+        value = self_converted.value * other_converted.value
+        return Quantity(value, q_type)
+        
     def divide(self, other):
-        raise NotImplementedError
+        if not hasattr(other, 'q_type'):
+            raise ValueError("These two physical quantities can not be divided not!")
+        else:
+            try:
+                q_type = self.q_type.divide(other.q_type)
+            except TypeError as exc:
+                raise TypeError("These types of two physical quantities can not be divided not!") from exc
+        other_converted = other.to_unit(other.q_type.SI_conherent_unit)
+        self_converted = self.to_unit(self.q_type.SI_conherent_unit)
+        value = self_converted.value / other_converted.value
+        return Quantity(value, q_type)
     def to_unit(self, unit:Unit):
         if unit not in self.q_type.__dict__.values() or unit == None:
             raise TypeError('The unit is not for this physical qunatity!')
