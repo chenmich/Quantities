@@ -1,4 +1,6 @@
 from .quantity_type import QuantityType
+from .quantity import Quantity
+
 from .units import Unit
 
 class s(Unit):
@@ -10,3 +12,7 @@ class TimeType(QuantityType):
     @classmethod
     def regist_type(cls):
         pass
+
+class Time(Quantity):
+    def __init__(self, value, unit):
+        super().__init__(value, TimeType, unit)

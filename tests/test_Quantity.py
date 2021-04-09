@@ -3,6 +3,7 @@ from math import isclose
 
 from quantities import length
 from quantities import velocity
+from quantities import time
 from quantities.quantity import Quantity
 
 def test_Quantity_add_substract():
@@ -61,5 +62,32 @@ def test_Quantity_create():
     assert q1.value == 32
     assert q1.q_type == q_type
     assert q1.current_unit == q.q_type.SI_conherent_unit
+def test_Quantity_multiply_divide():
+    l = length.Length(43, length.LengthType.k_unit)
+    t = time.Time(86, time.TimeType.G_unit)
+    v = velocity.Velocity(74) 
     
+    v1 = l.divide(t)
+    assert isclose(v1.value, 2e-6)
+    assert v1.q_type == velocity.VelocityType
+    assert v1.current_unit == velocity.VelocityType.SI_conherent_unit
+    with pytest.raises(TypeError):
+        v1.divide(l)
+    with pytest.raises(TypeError):
+        v1.divide(int)
+    with pytest.raises(TypeError):
+        v1.divide(None)
+    
+    l1 = v.multiply(t)
+    assert isclose(l1.value, 74*86*(1e+9))
+    assert l1.q_type == length.LengthType
+    assert l1.current_unit == length.LengthType.SI_conherent_unit
+    with pytest.raises(TypeError):
+        l1.multiply(t)
+    with pytest.raises(TypeError):
+        l1.multiply(int)
+    with pytest.raises(TypeError):
+        l1.multiply(None)
+
+
     
