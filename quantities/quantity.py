@@ -79,6 +79,20 @@ class Quantity():
             raise TypeError("The two physical quantities are of different types!")
         other_converted = other.to_unit(self.current_unit)
         return self.value >= other_converted.value
+    def lt(self, other):
+        if not hasattr(other, 'q_type'):
+            raise ValueError("These two physical quantities can not be compared now!")
+        elif other.q_type != self.q_type:
+            raise TypeError("The two physical quantities are of different types!")
+        other_converted = other.to_unit(self.current_unit)
+        return self.value < other_converted.value
+    def gt(self, other):
+        if not hasattr(other, 'q_type'):
+            raise ValueError("These two physical quantities can not be compared now!")
+        elif other.q_type != self.q_type:
+            raise TypeError("The two physical quantities are of different types!")
+        other_converted = other.to_unit(self.current_unit)
+        return self.value > other_converted.value
     @property
     def value(self):
         return self.__value
