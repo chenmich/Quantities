@@ -66,7 +66,12 @@ class Quantity():
         other_converted = other.to_unit(self.current_unit)
         return isclose(self.value, other_converted.value)
     def le(self, other):
-        raise NotImplementedError
+        if not hasattr(other, 'q_type'):
+            raise ValueError("These two physical quantities can not be compared now!")
+        elif other.q_type != self.q_type:
+            raise TypeError("The two physical quantities are of different types!")
+        other_converted = other.to_unit(self.current_unit)
+        return self.value <= other_converted.value
 
     @property
     def value(self):
