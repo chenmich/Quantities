@@ -34,7 +34,7 @@ def test_create_prefix_unit_for_LengthType():
 def test_create_prefix_unit_for_TimeType():    
     assert TimeType.da_unit.__name__ == 'das'
 def test_set_relation_between_type_unit():
-    LengthType.q_typ = LengthType.pri_unit.q_type
+    assert LengthType.pri_unit.q_type == LengthType
 def test_create_all_prefix_units():
     assert QuantityType.da_unit == units.daUnit
     assert QuantityType.h_unit == units.hUnit
