@@ -8,9 +8,11 @@ class metaQuantityType(type):
             prefix_name_value = units.__prefix_value__.copy()
             del prefix_name_value['base']
             for prefix in prefix_name_value.keys():
-                base_da_m = getattr(baseType.QuantityType, prefix + '_unit')
+                base_unit = getattr(baseType.QuantityType, prefix + '_unit')
                 prefix_unit_name = prefix + q_type.pri_unit.__name__
-                prefix_unit = type(prefix_unit_name, (base_da_m,), {})
+                prefix_unit = type(prefix_unit_name, (base_unit,), {})
+                prefix_unit.q_type = q_type
+                q_type.pri_unit.q_type = q_type
                 setattr(q_type, prefix+"_unit", prefix_unit)
             q_type.regist_type()
         return q_type
