@@ -126,7 +126,7 @@ def test_Quantity_ge():
     l1 = length.Length(55, length.LengthType.k_unit)
     l2 = length.Length(32000)
     l3 = length.Length(24, length.LengthType.k_unit)
-    l4 = length.Length(66)
+    l4 = length.Length(66, length.LengthType.k_unit)
     t = time.Time(32)
 
     assert l1.ge(l2)
