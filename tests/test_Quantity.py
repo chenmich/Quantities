@@ -122,7 +122,22 @@ def test_Quantity_le():
         l1.equal('32000')
     with pytest.raises(ValueError):
         l1.equal(None)
-    
+def test_Quantity_ge():
+    l1 = length.Length(55, length.LengthType.k_unit)
+    l2 = length.Length(32000)
+    l3 = length.Length(24, length.LengthType.k_unit)
+    l4 = length.Length(66)
+    t = time.Time(32)
 
+    assert l1.ge(l2)
+    assert l1.ge(l3)
+    assert not l1.ge(l4)
+
+    with pytest.raises(TypeError):
+        l1.equal(t)
+    with pytest.raises(ValueError):
+        l1.equal('32000')
+    with pytest.raises(ValueError):
+        l1.equal(None)
 
     

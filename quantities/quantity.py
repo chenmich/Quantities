@@ -72,7 +72,8 @@ class Quantity():
             raise TypeError("The two physical quantities are of different types!")
         other_converted = other.to_unit(self.current_unit)
         return self.value <= other_converted.value
-
+    def ge(self, other):
+        raise NotImplementedError
     @property
     def value(self):
         return self.__value
