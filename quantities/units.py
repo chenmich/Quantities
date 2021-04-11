@@ -42,7 +42,7 @@ class UnitExpressVisitor(ast.NodeTransformer):
             self.latex = self.latex + "^{"
             self.html = self.html + "<sup>"
         if isinstance(node.op, ast.Mult):
-            self.latex = self.latex + "\cdot "
+            self.latex = self.latex + r"\cdot "
             self.html = self.html + "·"
         self.visit(node.right) 
 
