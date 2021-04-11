@@ -5,11 +5,17 @@ from . import time
 from . import quantity
 
 class m_per_s(units.Unit):
-    pass
+    profile = {
+        "name":"meter per second",
+        "symbol":"m/s",
+        "express_by_SI_base":"m/s",
+        "express_by_SI":"m/s"
+    }
 
 class VelocityType(quantity_type.QuantityType):
     pri_unit = m_per_s
     SI_conherent_unit = pri_unit
+    
     @classmethod
     def regist_type(cls):
         cls.source[(length.LengthType, '/', time.TimeType)] = cls

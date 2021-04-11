@@ -3,7 +3,12 @@ from .quantity import Quantity
 from .units import Unit
 
 class m(Unit):
-    pass
+    profile = {
+        "name":"meter",
+        "symbol":"m", 
+        "express_by_SI_base":"m", 
+        "express_by_SI":"m"
+    }
 
 class LengthType(QuantityType):
     pri_unit = m

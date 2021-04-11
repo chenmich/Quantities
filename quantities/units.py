@@ -9,12 +9,27 @@ __prefix_value__ = {
 class Unit():
     prefix = {'name':'', 'symbol':'base'}
     q_type = None
+    profile = {
+        "name":'',
+        'symbol':'', 
+        'express_by_SI_base':'', 
+        'express_by_other_SI':'' 
+    }
     @classmethod
     def from_pri_unit(cls):
         return 1 /__prefix_value__[cls.prefix['symbol']]
     @classmethod
     def to_pri_unit(cls):
         return __prefix_value__[cls.prefix["symbol"]]
+    @classmethod
+    def symbol(cls):
+        return cls.profile["symbol"]
+    @classmethod
+    def express_by_SI_base(cls):
+        raise NotImplementedError
+    @classmethod 
+    def express_by_SI(cls):
+        raise NotImplementedError
 
 class yUnit(Unit):
     prefix = {'name':'yocto','symbol':'y'}

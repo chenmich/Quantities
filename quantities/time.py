@@ -4,7 +4,12 @@ from .quantity import Quantity
 from .units import Unit
 
 class s(Unit):
-    pass
+    profile = {
+        "name":"time", 
+        "symbol":"s", 
+        "express_by_SI_base":"s",
+        "express_by_SI":"s"
+    }
 
 class TimeType(QuantityType):
     pri_unit = s
