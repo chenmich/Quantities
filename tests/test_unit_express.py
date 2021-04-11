@@ -33,9 +33,11 @@ def test_unit_press():
     assert a.current_unit.symbol() == ''
     assert a.current_unit.express_by_SI_base() == ('m\cdot s^{-2}','m·s<sup>-2</sup>')
     assert a.current_unit.express_by_SI() == ('', '')
+    
 
     f = force.Force(93)
     assert f.current_unit.symbol() == 'N'
     assert f.current_unit.express_by_SI_base() == ('kg\cdot m\cdot s^{-2}', 'kg·m·s<sup>-2</sup>')
-    assert a.current_unit.express_by_SI() == ('','')
+    assert f.current_unit.express_by_SI() == ('','')
+
     

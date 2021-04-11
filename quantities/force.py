@@ -9,7 +9,7 @@ class N(units.Unit):
         "name":"newton",
         "symbol":"N",
         "express_by_SI_base":"kg*m*s-2",
-        "express_by_SI":"kg*m*s-2"
+        "express_by_SI":""
     }
 class ForceType(quantity_type.QuantityType):
     pri_unit = N

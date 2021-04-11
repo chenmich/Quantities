@@ -1,4 +1,4 @@
-from ast import parse, Subscript, Name, Constant, dump
+#from ast import parse, Subscript, Name, Constant, dump
 import ast
 
 
@@ -11,6 +11,13 @@ __prefix_value__ = {
 }
 
 class UnitExpressVisitor(ast.NodeTransformer):
+    '''
+        This class will generate the latex express and html express for unit' epxpress.
+        The raw express of units will be arithmetic expression. It is storage in the class variable
+        profile of the class Unit and subclass. 
+        This class will walk the ast by parsing from the arithmetic expression.
+
+    '''
     def __init__(self):
         super().__init__()
         self.latex = ''
@@ -40,9 +47,25 @@ class UnitExpressVisitor(ast.NodeTransformer):
         self.visit(node.right) 
 
 class Unit():
-    unit_exp_visitor = None
+    ''' 
+        This class is the base class for all units
+        the variable  profile will 
+        The arithmetic expression of units will follow the rules:
+        1.the symbol of each will be an item
+        2.the symbol will be seperated from each other by "*" and "/", "+" and "-"
+        3.The exponent of the power of the symbol is directly expressed 
+          by addition and subtraction operator
+        for example:
+            kg*m/s-2
+            kg*m+2*s-3
+            kg-1*m-2*s+3*A+2
+            m/s
+            m
+        This arithmetic expression will be convert the latex and html express
+    '''
     prefix = {'name':'', 'symbol':'base'}
     q_type = None
+    
     profile = {
         "name":'',
         'symbol':'', 
@@ -60,12 +83,16 @@ class Unit():
         return cls.profile["symbol"]
     @classmethod
     def express_by_SI_base(cls):
-        cls.unit_exp_visitor.visit(cls.profile['express_by_SI_base'])
-        return cls.unit_exp_visitor.latex, cls.unit_exp_visitor.html
+        tree = ast.parse(cls.profile['express_by_SI_base'])
+        visitor = UnitExpressVisitor()
+        visitor.visit(tree)
+        return visitor.latex, visitor.html
     @classmethod 
     def express_by_SI(cls):
-        cls.unit_exp_visitor.visit(cls.profile['express_by_SI'])
-        return cls.unit_exp_visitor.latex, cls.unit_exp_visitor.html
+        tree = ast.parse(cls.profile['express_by_SI'])
+        visitor = UnitExpressVisitor()
+        visitor.visit(tree)
+        return visitor.latex, visitor.html
 
 class yUnit(Unit):
     prefix = {'name':'yocto','symbol':'y'}

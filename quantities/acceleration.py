@@ -7,9 +7,9 @@ from . import velocity
 class meter_per_s_s(units.Unit):
     profile = {
         "name":"meter per second second",
-        "symbol":"m/s+2",
-        "express_by_SI_base":"ms-2",
-        "express_by_SI":"ms-2"
+        "symbol":"",
+        "express_by_SI_base":"m*s-2",
+        "express_by_SI":""
     }
 class AccelerationType(quantity_type.QuantityType):
     pri_unit = meter_per_s_s

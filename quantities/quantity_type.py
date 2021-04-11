@@ -14,7 +14,7 @@ class metaQuantityType(type):
                 prefix_unit.q_type = q_type
                 q_type.pri_unit.q_type = q_type
                 setattr(q_type, prefix+"_unit", prefix_unit)
-            q_type.regist_type()
+                q_type.regist_type()
         return q_type
 
 
