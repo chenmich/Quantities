@@ -1,3 +1,7 @@
+from ast import parse, Subscript, Name, Constant, dump
+import ast
+
+
 __prefix_value__ = {
     "da":1e+1, "h":1e+2,  "k":1e+3,  "M":1e+6,  "G" :1e+9, 
     "T":1e+12, "P":1e+15, "E":1e+18, "Z":1e+21, "Y":1e+24,
@@ -6,14 +10,44 @@ __prefix_value__ = {
     "base":1e+0
 }
 
+class UnitExpressVisitor(ast.NodeTransformer):
+    def __init__(self):
+        super().__init__()
+        self.latex = ''
+        self.html = ''
+    
+    def visit_Num(self, node):
+        self.latex = self.latex + str(node.value) +"}"
+        self.html = self.html + str(node.value) + "</sup>"
+    def visit_Name(self, node):
+        self.latex = self.latex +  node.id
+        self.html =  self.html + node.id  
+        
+    def visit_BinOp(self, node):
+        self.visit(node.left)
+        if isinstance(node.op, ast.Div):
+            self.latex = self.latex + '/'
+            self.html = self.html + '/'
+        if isinstance(node.op, ast.Sub):
+            self.latex =  self.latex + '^{-'
+            self.html = self.html + '<sup>-'
+        if isinstance(node.op, ast.Add):
+            self.latex = self.latex + "^{"
+            self.html = self.html + "<sup>"
+        if isinstance(node.op, ast.Mult):
+            self.latex = self.latex + "\cdot "
+            self.html = self.html + "·"
+        self.visit(node.right) 
+
 class Unit():
+    unit_exp_visitor = None
     prefix = {'name':'', 'symbol':'base'}
     q_type = None
     profile = {
         "name":'',
         'symbol':'', 
         'express_by_SI_base':'', 
-        'express_by_other_SI':'' 
+        'express_by_SI':'' 
     }
     @classmethod
     def from_pri_unit(cls):
@@ -26,10 +60,12 @@ class Unit():
         return cls.profile["symbol"]
     @classmethod
     def express_by_SI_base(cls):
-        raise NotImplementedError
+        cls.unit_exp_visitor.visit(cls.profile['express_by_SI_base'])
+        return cls.unit_exp_visitor.latex, cls.unit_exp_visitor.html
     @classmethod 
     def express_by_SI(cls):
-        raise NotImplementedError
+        cls.unit_exp_visitor.visit(cls.profile['express_by_SI'])
+        return cls.unit_exp_visitor.latex, cls.unit_exp_visitor.html
 
 class yUnit(Unit):
     prefix = {'name':'yocto','symbol':'y'}
@@ -74,3 +110,5 @@ class hUnit(Unit):
     prefix = {'name':'hecto','symbol':'h'}
 class daUnit(Unit):
     prefix = {'name':'deka','symbol':'da'}
+
+
