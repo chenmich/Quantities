@@ -112,7 +112,7 @@ class Quantity():
     def __lt__(self, other):
         return self.lt(other)
     def __hash__(self):
-        return 
+        return hash((self.q_type, self.value, self.current_unit))
     @property
     def value(self):
         return self.__value
