@@ -88,6 +88,10 @@ def test_Quantity_multiply_divide():
         l1.multiply(int)
     with pytest.raises(ValueError):
         l1.multiply(None)
+    l2 = l.multiply(3)
+    assert isclose(l.value * 3, l2.value)
+    assert l2.q_type == l.q_type
+    assert l2.current_unit == l.current_unit
 def test_Quantity_equal():
     l1 = length.Length(32, length.LengthType.k_unit)
     l2 = length.Length(32000)

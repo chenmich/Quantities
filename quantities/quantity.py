@@ -26,6 +26,10 @@ class Quantity():
         value = self.value - other_by_current_unit.value
         return Quantity(value, self.q_type, unit=self.current_unit).to_unit(self.q_type.SI_conherent_unit)
     def multiply(self, other):
+        if isinstance(other, (int, float,)):
+            value = self.value * other
+            current_unit = self.current_unit
+            return Quantity(value, self.q_type, current_unit)
         if not hasattr(other, 'q_type'):
             raise ValueError("These two physical quantities can not be multiplied not!")
         else:
