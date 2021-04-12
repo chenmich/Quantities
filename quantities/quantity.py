@@ -101,6 +101,18 @@ class Quantity():
             raise TypeError("The two physical quantities are of different types!")
         other_converted = other.to_unit(self.current_unit)
         return self.value > other_converted.value
+    def __eq__(self, other):
+        return self.equal(other)
+    def __le__(self, other):
+        return self.le(other)
+    def __ge__(self, other):
+        return self.ge(other)
+    def __gt__(self, other):
+        return self.gt(other)
+    def __lt__(self, other):
+        return self.lt(other)
+    def __hash__(self):
+        return 
     @property
     def value(self):
         return self.__value
