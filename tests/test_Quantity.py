@@ -103,6 +103,7 @@ def test_Quantity_equal():
     l4 = length.Length(44)
     t = time.Time(32)
     
+    assert l1 == l1
     assert l1.equal(l2)
     assert l1.equal(l3)
     assert not l1.equal(l4)
