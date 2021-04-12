@@ -43,6 +43,10 @@ class Quantity():
         return Quantity(value, q_type)
         
     def divide(self, other):
+        if isinstance(other, (int, float,)):
+            value = self.value / other
+            current_unit = self.current_unit
+            return Quantity(value, self.q_type, current_unit)
         if not hasattr(other, 'q_type'):
             raise ValueError("These two physical quantities can not be divided not!")
         else:
