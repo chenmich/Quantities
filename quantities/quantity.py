@@ -26,12 +26,17 @@ class Quantity():
         value = self.value - other_by_current_unit.value
         return Quantity(value, self.q_type, unit=self.current_unit).to_unit(self.q_type.SI_conherent_unit)
     def multiply(self, other):
+        from .identity import IdentityType
         if isinstance(other, (int, float,)):
             value = self.value * other
             current_unit = self.current_unit
             return Quantity(value, self.q_type, current_unit)
         if not hasattr(other, 'q_type'):
             raise ValueError("These two physical quantities can not be multiplied not!")
+        elif self.q_type == IdentityType:
+            q_type = other.q_type
+        elif other.q_type == IdentityType:
+            q_type = self.q_type
         else:
             try:
                 q_type = self.q_type.multiply(other.q_type)
@@ -46,12 +51,17 @@ class Quantity():
         '''
             This function is for true divide
         '''
+        from .identity import IdentityType
         if isinstance(other, (int, float,)):
             value = self.value / other
             current_unit = self.current_unit
             return Quantity(value, self.q_type, current_unit)
         if not hasattr(other, 'q_type'):
             raise ValueError("These two physical quantities can not be divided not!")
+        elif other.q_type == IdentityType:
+            q_type = self.q_type
+        elif self.q_type == other.q_type:
+            q_type = IdentityType
         else:
             try:
                 q_type = self.q_type.divide(other.q_type)
