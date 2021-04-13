@@ -43,6 +43,9 @@ class Quantity():
         return Quantity(value, q_type)
         
     def divide(self, other):
+        '''
+            This function is for true divide
+        '''
         if isinstance(other, (int, float,)):
             value = self.value / other
             current_unit = self.current_unit
@@ -113,6 +116,12 @@ class Quantity():
         return self.lt(other)
     def __hash__(self):
         return hash((self.q_type, self.value, self.current_unit))
+    def __mul__(self, other):
+        return self.multiply(other)
+    def __truediv__(self, other):
+        return self.divide(other)
+    def __rmul__(self, other):
+        return self.multiply(other)
     @property
     def value(self):
         return self.__value
