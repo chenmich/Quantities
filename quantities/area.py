@@ -1,8 +1,8 @@
 from .quantity import Quantity
 from .quantity_type import QuantityType
 from .units import Unit
-from .length import LengthType, RadialLengthType
-
+from .length import LengthType
+from .radial_length import RadialLengthType
 class square_meter(Unit):
     profile = {
         "name":"meter",
@@ -23,10 +23,3 @@ class Area(Quantity):
     def __init__(self, value, unit=None):
         super().__init__(value, AreaType, unit)
 
-class RadialAreaType(QuantityType):
-    pri_unit = square_meter
-    SI_conherent_unit = pri_unit
-    @classmethod
-    def regist_type(cls):
-        cls.source[(RadialLengthType, '*', RadialLengthType)] = cls
-        cls.source[(cls, '/', RadialLengthType)] = RadialLengthType

@@ -18,7 +18,8 @@ to solve such problems.
 from .quantity_type import QuantityType
 from .quantity import Quantity
 from .units import Unit
-from .length import LengthType, RadialLengthType
+from .length import LengthType
+from .radial_length import RadialLengthType
 
 
 

@@ -1,7 +1,8 @@
 from .quantity_type import QuantityType
 from .quantity import Quantity
 from .units import Unit
-from .area import AreaType, RadialAreaType
+from .area import AreaType
+from .radial_area import RadialAreaType
 
 class steradian(Unit):
     profile = {
@@ -19,3 +20,6 @@ class SolidAngleType(QuantityType):
         cls.source[(AreaType, '/', RadialAreaType)] = cls
         cls.source[(cls, '*', RadialAreaType)] = AreaType
         cls.source[(AreaType, '/', cls)] = RadialAreaType
+class SolidAngle(Quantity):
+    def __init__(self, value, unit=None):
+        super().__init__(value, SolidAngleType, unit)
