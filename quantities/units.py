@@ -94,48 +94,73 @@ class Unit():
         visitor.visit(tree)
         return visitor.latex, visitor.html
 
-class yUnit(Unit):
+class prefixUnit(Unit):
+    prefix = {'name':'', 'symbol':''}
+    @classmethod
+    def express_by_SI_base(cls):
+        pri_unit_express = cls.q_type.pri_unit.express_by_SI_base()
+        return cls.__unit_express__(pri_unit_express)
+    @classmethod
+    def express_by_SI(cls):
+        pri_unit_express = cls.q_type.pri_unit.express_by_SI()
+        return cls.__unit_express__(pri_unit_express)
+        
+    @classmethod
+    def __unit_express__(cls, pri_unit_express):
+        if pri_unit_express[0] == '':
+            unit_latex = ''
+        else:
+            unit_latex = cls.prefix['symbol'] + pri_unit_express[0]
+        if pri_unit_express[1] == '':
+            unit_html = ''
+        else:
+            unit_html = cls.prefix['symbol'] + pri_unit_express[1]
+        return unit_latex, unit_html
+    
+
+
+class yUnit(prefixUnit):
     prefix = {'name':'yocto','symbol':'y'}
     
-class zUnit(Unit):
+class zUnit(prefixUnit):
     prefix = {'name':'zepto','symbol':'z'}
     
-class aUnit(Unit):
+class aUnit(prefixUnit):
     prefix = {'name':'atto','symbol':'a'}
     
-class fUnit(Unit):
+class fUnit(prefixUnit):
     prefix = {'name':'femto','symbol':'f'}
-class pUnit(Unit):
+class pUnit(prefixUnit):
     prefix = {'name':'pico','symbol':'p'}
-class nUnit(Unit):
+class nUnit(prefixUnit):
     prefix = {'name':'nano','symbol':'n'}
-class muUnit(Unit):
+class muUnit(prefixUnit):
     prefix = {'name':'micro','symbol':'mu'}
-class mUnit(Unit):
+class mUnit(prefixUnit):
     prefix = {'name':'milli','symbol':'m'}
-class cUnit(Unit):
+class cUnit(prefixUnit):
     prefix = {'name':'centi','symbol':'c'}
-class dUnit(Unit):
+class dUnit(prefixUnit):
     prefix = {'name':'deci','symbol':'d'}
-class YUnit(Unit):
+class YUnit(prefixUnit):
     prefix = {'name':'yotta','symbol':'Y'}
-class ZUnit(Unit):
+class ZUnit(prefixUnit):
     prefix = {'name':'zetta','symbol':'Z'}
-class EUnit(Unit):
+class EUnit(prefixUnit):
     prefix = {'exa':'giga','symbol':'E'}
-class PUnit(Unit):
+class PUnit(prefixUnit):
     prefix = {'name':'peta','symbol':'P'}
-class TUnit(Unit):
+class TUnit(prefixUnit):
     prefix = {'name':'tera','symbol':'T'}
-class GUnit(Unit):
+class GUnit(prefixUnit):
     prefix = {'name':'giga','symbol':'G'}    
-class MUnit(Unit):
+class MUnit(prefixUnit):
     prefix = {'name':'mega','symbol':'M'}
-class kUnit(Unit):
+class kUnit(prefixUnit):
     prefix = {'name':'kilo','symbol':'k'}
-class hUnit(Unit):
+class hUnit(prefixUnit):
     prefix = {'name':'hecto','symbol':'h'}
-class daUnit(Unit):
+class daUnit(prefixUnit):
     prefix = {'name':'deka','symbol':'da'}
 
 

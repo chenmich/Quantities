@@ -39,4 +39,8 @@ class PlaneAngleType(QuantityType):
         cls.source[(LengthType, '/', RadialLengthType)] = cls
         cls.source[(cls, '*', RadialLengthType)] = LengthType
         cls.source[(LengthType, '/', cls)] = RadialLengthType
+
+class PlaneAngle(Quantity):
+    def __init__(self, value, unit=None):
+        super().__init__(value, PlaneAngleType, unit)
         
