@@ -8,7 +8,7 @@ from quantities import force
 
 
 
-def test_unit_press():
+def test_unit_express():
     l = length.Length(33)
     assert l.current_unit.symbol() == "m"
     assert l.current_unit.express_by_SI_base() == ("m", "m")
@@ -39,5 +39,7 @@ def test_unit_press():
     assert f.current_unit.symbol() == 'N'
     assert f.current_unit.express_by_SI_base() == (r'kg\cdot m\cdot s^{-2}', 'kg·m·s<sup>-2</sup>')
     assert f.current_unit.express_by_SI() == ('','')
-
-    
+def test_prefix_unit_express():
+    a = acceleration.Acceleration(2.2, unit=acceleration.AccelerationType.k_unit)
+    assert a.current_unit.express_by_SI_base() == (r'km\cdot s^{-2}', r'km·s<sup>-2</sup>')
+    assert a.current_unit.express_by_SI() == ("", "")
