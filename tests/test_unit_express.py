@@ -5,6 +5,7 @@ from quantities import time
 from quantities import acceleration
 from quantities import mass
 from quantities import force
+from quantities import energy
 
 
 
@@ -43,3 +44,7 @@ def test_prefix_unit_express():
     a = acceleration.Acceleration(2.2, unit=acceleration.AccelerationType.k_unit)
     assert a.current_unit.express_by_SI_base() == (r'km\cdot s^{-2}', r'km·s<sup>-2</sup>')
     assert a.current_unit.express_by_SI() == ("", "")
+
+    e = energy.Energy(3.3, energy.EnergyType.M_unit)
+    assert  e.current_unit.express_by_SI_base() == (r'Mkg\cdot m^{2}\cdot s^{-2}', r'Mkg·m<sup>2</sup>·s<sup>-2</sup>')
+    assert e.current_unit.express_by_SI() == (r'MN\cdot m', r'MN·m')
