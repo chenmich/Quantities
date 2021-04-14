@@ -4,6 +4,8 @@ from .units import Unit
 from .area import square_meter
 from .radial_length import RadialLengthType
 
+class radial_square_meter(square_meter):
+    pass
 class RadialAreaType(QuantityType):
     pri_unit = square_meter
     SI_conherent_unit = pri_unit

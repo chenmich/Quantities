@@ -3,8 +3,10 @@ from .quantity import Quantity
 from .units import Unit
 from .length import m
 
+class radial_m(m):
+    pass
 class RadialLengthType(QuantityType):
-    pri_unit = m
+    pri_unit = radial_m
     SI_conherent_unit = pri_unit
     @classmethod
     def regist_type(cls):
