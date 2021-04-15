@@ -9,6 +9,7 @@ from quantities import energy
 
 
 
+
 def test_unit_express():
     l = length.Length(33)
     assert l.current_unit.symbol() == "m"
@@ -48,6 +49,12 @@ def test_prefix_unit_express():
     e = energy.Energy(3.3, energy.EnergyType.M_unit)
     assert  e.current_unit.express_by_SI_base() == (r'Mkg\cdot m^{2}\cdot s^{-2}', r'Mkg·m<sup>2</sup>·s<sup>-2</sup>')
     assert e.current_unit.express_by_SI() == (r'MN\cdot m', r'MN·m')
+
+    e = energy.Energy(32, energy.EnergyType.mu_unit)
+    assert e.current_unit.express_by_SI_base() == (r'\mu kg\cdot m^{2}\cdot s^{-2}', r'μkg·m<sup>2</sup>·s<sup>-2</sup>')
+    assert e.current_unit.express_by_SI() == (r'\mu N\cdot m', r'μN·m')
+
+
 def test_prefix_unit_symbol():
     t = time.Time(2.1, time.TimeType.mu_unit)
     assert t.current_unit.symbol() == 'μs'

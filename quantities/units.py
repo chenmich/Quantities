@@ -107,20 +107,29 @@ class prefixUnit(Unit):
     @classmethod
     def symbol(cls):
         pri_unit_symbol = cls.q_type.pri_unit.profile['symbol']
+        if pri_unit_symbol == '':
+            return ''
         this_prefix = cls.prefix['symbol']
         if this_prefix == 'mu':
             this_prefix = 'μ'
         return this_prefix + pri_unit_symbol
     @classmethod
     def __unit_express__(cls, pri_unit_express):
+        this_prefix = cls.prefix['symbol']
+        if this_prefix == 'mu':
+            this_prefix_latex = r'\mu '
+            this_prefix_html = 'μ'
+        else:
+            this_prefix_latex = this_prefix
+            this_prefix_html = this_prefix
         if pri_unit_express[0] == '':
             unit_latex = ''
         else:
-            unit_latex = cls.prefix['symbol'] + pri_unit_express[0]
+            unit_latex = this_prefix_latex + pri_unit_express[0]
         if pri_unit_express[1] == '':
             unit_html = ''
         else:
-            unit_html = cls.prefix['symbol'] + pri_unit_express[1]
+            unit_html = this_prefix_html + pri_unit_express[1]
         return unit_latex, unit_html
     
 
