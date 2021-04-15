@@ -104,7 +104,13 @@ class prefixUnit(Unit):
     def express_by_SI(cls):
         pri_unit_express = cls.q_type.pri_unit.express_by_SI()
         return cls.__unit_express__(pri_unit_express)
-        
+    @classmethod
+    def symbol(cls):
+        pri_unit_symbol = cls.q_type.pri_unit.profile['symbol']
+        this_prefix = cls.prefix['symbol']
+        if this_prefix == 'mu':
+            this_prefix = 'μ'
+        return this_prefix + pri_unit_symbol
     @classmethod
     def __unit_express__(cls, pri_unit_express):
         if pri_unit_express[0] == '':

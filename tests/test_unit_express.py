@@ -52,4 +52,4 @@ def test_prefix_unit_symbol():
     t = time.Time(2.1, time.TimeType.mu_unit)
     assert t.current_unit.symbol() == 'μs'
     heat = energy.Energy(45, energy.EnergyType.G_unit)
-    assert heat.current_unit.symbol == 'GW'
+    assert heat.current_unit.symbol() == 'GJ'
