@@ -48,3 +48,8 @@ def test_prefix_unit_express():
     e = energy.Energy(3.3, energy.EnergyType.M_unit)
     assert  e.current_unit.express_by_SI_base() == (r'Mkg\cdot m^{2}\cdot s^{-2}', r'Mkg·m<sup>2</sup>·s<sup>-2</sup>')
     assert e.current_unit.express_by_SI() == (r'MN\cdot m', r'MN·m')
+def test_prefix_unit_symbol():
+    t = time.Time(2.1, time.TimeType.mu_unit)
+    assert t.current_unit.symbol() == 'μs'
+    heat = energy.Energy(45, energy.EnergyType.G_unit)
+    assert heat.current_unit.symbol == 'GW'
