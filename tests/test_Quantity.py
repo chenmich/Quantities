@@ -4,6 +4,7 @@ from math import isclose
 from quantities import length
 from quantities import velocity
 from quantities import time
+from quantities import thermodynamic_temperature
 from quantities.quantity import Quantity
 
 def test_Quantity_add_substract():
@@ -65,14 +66,15 @@ def test_Quantity_create():
 def test_Quantity_multiply_divide():
     l = length.Length(43, length.LengthType.k_unit)
     t = time.Time(86, time.TimeType.G_unit)
-    v = velocity.Velocity(74) 
+    v = velocity.Velocity(74)
+    tem = thermodynamic_temperature.ThermodynamicTemperature(21) 
     
     v1 = l.divide(t)
     assert isclose(v1.value, 5e-7)
     assert v1.q_type == velocity.VelocityType
     assert v1.current_unit == velocity.VelocityType.SI_conherent_unit
     with pytest.raises(TypeError):
-        v1.divide(l)
+        v1.divide(tem)
     with pytest.raises(ValueError):
         v1.divide(int)
     with pytest.raises(ValueError):

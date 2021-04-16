@@ -3,11 +3,13 @@ from quantities import quantity
 from quantities import length
 from quantities import time
 from quantities import velocity
+from quantities import thermodynamic_temperature
 
 def test_QuantityType_multiply_divide():
     v_type = velocity.VelocityType
     l_type = length.LengthType
-    t_type = time.TimeType 
+    t_type = time.TimeType
+    tem_type = thermodynamic_temperature.ThermodynamicTemperatureType 
 
     assert l_type == v_type.multiply(t_type)
     assert l_type == t_type.multiply(v_type)
@@ -32,9 +34,9 @@ def test_QuantityType_multiply_divide():
     with pytest.raises(TypeError):
         v_type.multiply(float)
     with pytest.raises(TypeError):
-        v_type.divide(l_type)
+        v_type.divide(tem_type)
     with pytest.raises(TypeError):
-        v_type.divide(l_type)
+        v_type.divide(tem_type)
     with pytest.raises(TypeError):
         v_type.divide(float)
     with pytest.raises(TypeError):
