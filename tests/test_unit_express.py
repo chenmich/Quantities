@@ -6,39 +6,40 @@ from quantities import acceleration
 from quantities import mass
 from quantities import force
 from quantities import energy
+from quantities import energy_density
 
 
 
 
 def test_unit_express():
     l = length.Length(33)
-    assert l.current_unit.symbol() == "m"
+    assert l.current_unit.symbol() == ("m", "m")
     assert l.current_unit.express_by_SI_base() == ("m", "m")
     assert l.current_unit.express_by_SI() == ("m", "m")
 
     t = time.Time(22)
-    assert t.current_unit.symbol() == 's'
+    assert t.current_unit.symbol() == ('s', 's')
     assert t.current_unit.express_by_SI_base() == ('s', "s")
     assert t.current_unit.express_by_SI() == ('s', "s")
 
     mass_q = mass.Mass(54)
-    assert mass_q.q_type.pri_unit.symbol() == 'g','g'
+    assert mass_q.q_type.pri_unit.symbol() == ('g','g')
     assert mass_q.q_type.pri_unit.express_by_SI_base() == ('g', 'g')
     assert mass_q.q_type.pri_unit.express_by_SI() == ('g', 'g')
 
     v = velocity.Velocity(73)
-    assert v.current_unit.symbol() == 'm/s'
+    assert v.current_unit.symbol() == ('m/s', 'm/s')
     assert v.current_unit.express_by_SI_base() == ('m/s', 'm/s')
     assert v.current_unit.express_by_SI() == ('m/s', 'm/s')
 
     a = acceleration.Acceleration(88)
-    assert a.current_unit.symbol() == ''
+    assert a.current_unit.symbol() == ('', '')
     assert a.current_unit.express_by_SI_base() == (r'm\cdot s^{-2}','m·s<sup>-2</sup>')
     assert a.current_unit.express_by_SI() == ('', '')
     
 
     f = force.Force(93)
-    assert f.current_unit.symbol() == 'N'
+    assert f.current_unit.symbol() == ('N', 'N')
     assert f.current_unit.express_by_SI_base() == (r'kg\cdot m\cdot s^{-2}', 'kg·m·s<sup>-2</sup>')
     assert f.current_unit.express_by_SI() == ('','')
 def test_prefix_unit_express():
@@ -57,6 +58,9 @@ def test_prefix_unit_express():
 
 def test_prefix_unit_symbol():
     t = time.Time(2.1, time.TimeType.mu_unit)
-    assert t.current_unit.symbol() == 'μs'
+    assert t.current_unit.symbol() == (r'\mu s', 'μs')
     heat = energy.Energy(45, energy.EnergyType.G_unit)
-    assert heat.current_unit.symbol() == 'GJ'
+    assert heat.current_unit.symbol() == ('GJ', 'GJ')
+    ed = energy_density.EnergyDensity(23)
+    assert ed.current_unit.symbol() == (r'J\cdot m^{-3}', r'J·m<sup>-3</sup>')
+    

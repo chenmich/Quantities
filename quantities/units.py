@@ -80,7 +80,11 @@ class Unit():
         return __prefix_value__[cls.prefix["symbol"]]
     @classmethod
     def symbol(cls):
-        return cls.profile["symbol"]
+        tree = ast.parse(cls.profile['symbol'])
+        visitor = UnitExpressVisitor()
+        visitor.visit(tree)
+        return visitor.latex, visitor.html
+        #return cls.profile["symbol"]
     @classmethod
     def express_by_SI_base(cls):
         tree = ast.parse(cls.profile['express_by_SI_base'])
@@ -106,13 +110,8 @@ class prefixUnit(Unit):
         return cls.__unit_express__(pri_unit_express)
     @classmethod
     def symbol(cls):
-        pri_unit_symbol = cls.q_type.pri_unit.profile['symbol']
-        if pri_unit_symbol == '':
-            return ''
-        this_prefix = cls.prefix['symbol']
-        if this_prefix == 'mu':
-            this_prefix = 'μ'
-        return this_prefix + pri_unit_symbol
+        pri_unit_symbol = cls.q_type.pri_unit.symbol()
+        return cls.__unit_express__(pri_unit_symbol)
     @classmethod
     def __unit_express__(cls, pri_unit_express):
         this_prefix = cls.prefix['symbol']
