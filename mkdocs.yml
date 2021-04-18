@@ -1,15 +1,21 @@
 site_name: Physical Quantity Calculating
 nav:
-    - Home: readme.md
-    - Quantity: Quantity.md
+    - Home: index.md
+    - Quantity model: Quantity.md
+    - Quickstart: Quickstart.md
+    - Usage: Usage.md
 
 
 
 theme: 
     name: material
 markdown_extensions:
-    - pymdownx.highlight
+    - pymdownx.highlight:
+        linenums: true
+        linenums_style: pymdownx.inline
+    - pymdownx.inlinehilite
     - pymdownx.superfences
+    - pymdownx.snippets
     - pymdownx.arithmatex:
         generic: true
         
