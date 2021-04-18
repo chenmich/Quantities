@@ -1,7 +1,7 @@
 site_name: Physical Quantity Calculating
 nav:
     - Home: readme.md
-    - Quickstart: quickstart.md
+    - Quantity: Quantity.md
 
 
 
