@@ -11,7 +11,7 @@ As the length of the dividend, it is the length of the arc on the plane stretche
 and as the divisor, it is the length of the radius of the arc. The two are geometrically different. 
 Therefore, borrow their differences in the design of the class library 
 to achieve the type of calculation of physical quantities. 
-For solid angles, angular momentum, etc., there are also such issues that need to be dealt with. 
+For solid angles, Moment of force, etc., there are also such issues that need to be dealt with. 
 Therefore, the classes RadialLength and RadialAreaType are specially designed in the class library 
 to solve such problems.
 '''

@@ -1,0 +1,4 @@
+from .specific_heat_capacity import SpecificHeatCapacity, SpecificHeatCapacityType
+
+SpecificEntropy = SpecificHeatCapacity
+SpecificEntropyType = SpecificHeatCapacityType
