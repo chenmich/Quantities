@@ -87,3 +87,6 @@ mu_0 = MagneticPermeability(4*math.pi*1e-7)
 epsilon_0 = ElectricConstant(8.8541878128e-12)
 g = Acceleration(9.8)
 C = Velocity(299792458)
+
+
+__version__ = '0.1.0'
