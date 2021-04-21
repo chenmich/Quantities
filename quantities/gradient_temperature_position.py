@@ -16,7 +16,7 @@ class GradientTemperaturePositionType(QuantityType):
     pri_unit = kelvin_per_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(ThermodynamicTemperatureType, '/', LengthType)] = cls
         cls.source[(cls, '*', LengthType)] = ThermodynamicTemperatureType
         cls.source[(LengthType, '*', cls)] = ThermodynamicTemperatureType

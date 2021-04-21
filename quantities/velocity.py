@@ -17,7 +17,7 @@ class VelocityType(quantity_type.QuantityType):
     SI_conherent_unit = pri_unit
     
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(length.LengthType, '/', time.TimeType)] = cls
         cls.source[(cls, '*', time.TimeType)] = length.LengthType
         cls.source[(time.TimeType, '*', cls)] = length.LengthType

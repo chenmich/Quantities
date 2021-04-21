@@ -18,7 +18,7 @@ class SpecificVolumeType(QuantityType):
     pri_unit = cubic_meter_per_kilogram
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(VolumeType, '/', MassType)] = cls
         cls.source[(MassType, '*', cls)] = VolumeType
         cls.source[(cls, '*', MassType)] = VolumeType

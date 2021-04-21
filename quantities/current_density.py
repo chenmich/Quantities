@@ -15,7 +15,7 @@ class CurrentDensityType(QuantityType):
     pri_unit = ampere_per_square_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(ElectriCurrentType, '/', AreaType)] = cls
         cls.source[(cls, '*', AreaType)] = ElectriCurrentType
         cls.source[(AreaType, '*', cls)] = ElectriCurrentType

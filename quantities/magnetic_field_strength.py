@@ -17,7 +17,7 @@ class MagneticFieldStrengthType(QuantityType):
     pri_unit = ampere_per_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(MagneticFluxDensity, '/', MagneticPermeabilityType)] = cls
         cls.source[(cls, '*', MagneticPermeabilityType)] = MagneticFluxDensity
         cls.source[(MagneticPermeabilityType, '*', cls)] = MagneticFluxDensity

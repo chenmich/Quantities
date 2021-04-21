@@ -20,7 +20,7 @@ class StressType(QuantityType):
     pri_unit = pascal
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(ForceType, '/', AreaType)] = cls
         cls.source[(cls, '*', AreaType)] = ForceType
         cls.source[(AreaType, '*', cls)] = ForceType

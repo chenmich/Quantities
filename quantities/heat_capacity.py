@@ -16,7 +16,7 @@ class HeatCapacityType(QuantityType):
     pri_unit = joule_per_kelvin
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(EnergyType, '/', ThermodynamicTemperature)] = cls
         cls.source[(ThermodynamicTemperature, '*', cls)] = EnergyType
         cls.source[(cls, '*', ThermodynamicTemperature)] = EnergyType

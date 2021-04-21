@@ -19,7 +19,7 @@ class CapacitanceType(QuantityType):
     pri_unit = farad
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(ElectriChargeType, '/', ElectricPotentialDifferenceType)] = cls
         cls.source[(cls, '*', ElectricPotentialDifferenceType)] = ElectriChargeType
         cls.source[(ElectricPotentialDifferenceType, '*', cls)] = ElectriChargeType

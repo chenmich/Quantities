@@ -16,7 +16,7 @@ class ElectricConstantType(QuantityType):
     pri_unit = farad_per_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(CapacitanceType, '/', LengthType)] = cls
         cls.source[(cls, '*', LengthType)] = CapacitanceType
         cls.source[(LengthType, '*', cls)] = CapacitanceType

@@ -16,7 +16,7 @@ class SurfaceDensityType(QuantityType):
     pri_unit = kilogram_per_square_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(MassType, '/', AreaType)] = cls
         cls.source[(AreaType, '*', cls)] = MassType
         cls.source[(cls, '*', AreaType)] = MassType

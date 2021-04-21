@@ -16,7 +16,7 @@ class DensityType(QuantityType):
     pri_unit = kilogram_per_cubic_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(MassType, '/', VolumeType)] = cls
         cls.source[(VolumeType, '*', cls)] = MassType
         cls.source[(cls, '*', VolumeType)] = MassType

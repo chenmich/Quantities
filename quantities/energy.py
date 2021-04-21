@@ -21,7 +21,7 @@ class EnergyType(QuantityType):
     pri_unit = joule
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(ForceType, '*', LengthType)] = cls
         cls.source[(LengthType, '*', ForceType)] = cls
         cls.source[(cls, '/', ForceType)] = LengthType

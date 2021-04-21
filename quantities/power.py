@@ -19,7 +19,7 @@ class PowerType(QuantityType):
     pri_unit = watt
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(EnergyType, '/', TimeType)] = cls
         cls.source[(cls, '*', TimeType)] = EnergyType
         cls.source[(TimeType, '*', cls)] = EnergyType

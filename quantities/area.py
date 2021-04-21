@@ -15,7 +15,7 @@ class AreaType(QuantityType):
     pri_unit = square_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(LengthType, '*', LengthType)] = cls
         cls.source[(cls, '/', LengthType)] = LengthType
 

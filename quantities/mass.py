@@ -13,7 +13,7 @@ class g(Unit):
 class MassType(QuantityType):
     pri_unit = g
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.SI_conherent_unit = cls.k_unit
 
 class Mass(Quantity):

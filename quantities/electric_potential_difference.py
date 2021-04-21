@@ -20,7 +20,7 @@ class ElectricPotentialDifferenceType(QuantityType):
     pri_unit = volt
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(EnergyType, '/', ElectriChargeType)] = cls
         cls.source[(cls, '*', ElectriChargeType)] = EnergyType
         cls.source[(ElectriChargeType, '*', cls)] = EnergyType

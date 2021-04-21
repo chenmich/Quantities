@@ -14,7 +14,7 @@ class LuminousIntensityType(QuantityType):
     pri_unit = cd
     pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         pass
 
 class LuminousIntensity(Quantity):

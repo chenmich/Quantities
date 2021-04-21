@@ -10,7 +10,7 @@ class RadialLengthType(QuantityType):
     pri_unit = radial_m
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         pass
 
 class RadialLength(Quantity):

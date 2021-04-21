@@ -16,7 +16,7 @@ class DynamicViscosityType(QuantityType):
     pri_unit = pascal_second
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(StressType, '/', GradientSpeedPositionType)] = cls
         cls.source[(StressType, '/', cls)] = GradientSpeedPositionType
         cls.source[(cls, '*', GradientSpeedPositionType)] = StressType

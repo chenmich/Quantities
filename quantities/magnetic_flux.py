@@ -15,7 +15,7 @@ class MagneticFluxType(QuantityType):
     pri_unit = weber
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         pass
 
 class MagneticFlux(Quantity):

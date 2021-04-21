@@ -15,7 +15,7 @@ class AccelerationType(quantity_type.QuantityType):
     pri_unit = meter_per_s_s
     SI_conherent_unit = pri_unit    
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(velocity.VelocityType, '/', time.TimeType)] = cls
         cls.source[(cls, '*', time.TimeType)] = velocity.VelocityType
         cls.source[(time.TimeType, '*', cls)] = velocity.VelocityType

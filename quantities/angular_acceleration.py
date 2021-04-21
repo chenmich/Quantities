@@ -16,7 +16,7 @@ class AngulaAccelerationType(QuantityType):
     pri_unit = radian_per_second_squared
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(AngularVelocityType, '/', TimeType)] = cls
         cls.source[(cls, '*', TimeType)] = AngularVelocityType
         cls.source[(TimeType, '*', cls)] = AngularVelocityType

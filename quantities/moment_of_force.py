@@ -16,7 +16,7 @@ class MomentOfForceType(QuantityType):
     pri_unit = newton_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(ForceType, '*', RadialLengthType)] = cls
         cls.source[(RadialLengthType, '*', ForceType)] = cls
         cls.source[(cls, '/', RadialLengthType)] = ForceType

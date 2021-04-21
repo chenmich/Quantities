@@ -16,7 +16,7 @@ class SurfaceTensionType(QuantityType):
     pri_unit = newton_per_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(ForceType, '/', AreaType)] = cls
         cls.source[(AreaType, '*', cls)] = ForceType
         cls.source[(cls, '*', AreaType)] = ForceType

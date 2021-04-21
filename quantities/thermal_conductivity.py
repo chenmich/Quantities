@@ -16,7 +16,7 @@ class ThermalConductivityType(QuantityType):
     pri_unit = watt_per_meter_kelvin
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(PowerType, '/', GradientTemperaturePositionType)] = cls
         cls.source[(cls, '*', GradientTemperaturePositionType)] = PowerType
         cls.source[(GradientTemperaturePositionType, '*', cls)] = PowerType

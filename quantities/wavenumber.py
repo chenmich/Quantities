@@ -16,7 +16,7 @@ class WavenumberType(QuantityType):
     pri_unit = per_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(Identity, '/', LengthType)] = cls
         cls.source[(cls, '*', LengthType)] = Identity
         cls.source[(LengthType, '*', cls)] = Identity

@@ -15,7 +15,7 @@ class TimeType(QuantityType):
     pri_unit = s
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         pass
 
 class Time(Quantity):

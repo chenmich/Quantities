@@ -18,7 +18,7 @@ class ElectricConductanceType(QuantityType):
     pri_unit = siemens
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(ElectriCurrentType, '/', ElectricPotentialDifferenceType)] = cls
         cls.source[(cls, '*', ElectricPotentialDifferenceType)] = ElectriCurrentType
         cls.source[(ElectricPotentialDifferenceType, '*', cls)] = ElectriCurrentType

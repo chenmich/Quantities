@@ -14,7 +14,7 @@ class metaQuantityType(type):
                 prefix_unit.q_type = q_type
                 q_type.pri_unit.q_type = q_type
                 setattr(q_type, prefix+"_unit", prefix_unit)
-                q_type.regist_type()
+                q_type.register_type()
         return q_type
 
 
@@ -44,7 +44,7 @@ class QuantityType(metaclass=metaQuantityType):
     z_unit  = units.zUnit
     y_unit  = units.yUnit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         raise NotImplementedError
     @classmethod
     def divide(cls, other):

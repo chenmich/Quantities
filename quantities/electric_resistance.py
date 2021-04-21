@@ -21,7 +21,7 @@ class ElectricResistanceType(QuantityType):
     pri_unit = ohm
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(ElectricPotentialDifferenceType, '/', ElectriCurrentType)] = cls
         cls.source[(cls, '*', ElectriCurrentType)] = ElectricPotentialDifferenceType
         cls.source[(ElectriCurrentType, '*', cls)] = ElectricPotentialDifferenceType

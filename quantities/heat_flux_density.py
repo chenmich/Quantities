@@ -16,7 +16,7 @@ class HeatFluxDensityType(QuantityType):
     pri_unit = watt_per_square_metre
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(PowerType, '/', AreaType)] = cls
         cls.source[(cls, '*', AreaType)] = PowerType
         cls.source[(AreaType, '*', cls)] = PowerType

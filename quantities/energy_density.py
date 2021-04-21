@@ -16,7 +16,7 @@ class EnergyDensityType(QuantityType):
     pri_unit = joule_per_cubic_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(EnergyType, '/', VolumeType)] = cls
         cls.source[(cls, '*', VolumeType)] = EnergyType
         cls.source[(VolumeType, '*', cls)] = EnergyType

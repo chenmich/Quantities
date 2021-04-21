@@ -16,7 +16,7 @@ class GradientSpeedPositionType(QuantityType):
     pri_unit = per_second
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(VelocityType, '/', LengthType)] = cls
         cls.source[(LengthType, '*', cls)] = VelocityType
         cls.source[(cls, '*', LengthType)] = VelocityType

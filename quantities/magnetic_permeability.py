@@ -13,7 +13,7 @@ class MagneticPermeabilityType(QuantityType):
     pri_unit = newton_per_square_ampere
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         pass
 
 class MagneticPermeability(Quantity):

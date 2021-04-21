@@ -16,7 +16,7 @@ class SolidAngleType(QuantityType):
     pri_unit = steradian
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(AreaType, '/', RadialAreaType)] = cls
         cls.source[(cls, '*', RadialAreaType)] = AreaType
         cls.source[(AreaType, '/', cls)] = RadialAreaType

@@ -15,7 +15,7 @@ class ElectriChargeType(QuantityType):
     pri_unit = coulomb
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(ElectriCurrentType, '*', TimeType)] = cls
         cls.source[(cls, '/', TimeType)] = ElectriCurrentType
 

@@ -16,7 +16,7 @@ class VolumeType(QuantityType):
     pri_unit = cubic_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(LengthType, '*', AreaType)] = cls
         cls.source[(AreaType, '*', LengthType)] = cls
         cls.source[(cls, '/', LengthType)] = AreaType

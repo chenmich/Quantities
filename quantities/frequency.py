@@ -16,7 +16,7 @@ class FrequencyType(QuantityType):
     pri_unit = hertz
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(IdentityType, '/', TimeType)] = cls
         cls.source[(cls, '*', TimeType)] = IdentityType
         cls.source[(TimeType, '*', cls)] = IdentityType

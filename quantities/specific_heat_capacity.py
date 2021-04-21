@@ -16,7 +16,7 @@ class SpecificHeatCapacityType(QuantityType):
     pri_unit = joule_per_kilogram_kelvin
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(HeatCapacityType, '/', MassType)] = cls
         cls.source[(cls, '*', MassType)] = HeatCapacityType
         cls.source[(MassType, '*', cls)] = HeatCapacityType

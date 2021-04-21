@@ -10,7 +10,7 @@ class RadialAreaType(QuantityType):
     pri_unit = square_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(RadialLengthType, '*', RadialLengthType)] = cls
         cls.source[(cls, '/', RadialLengthType)] = RadialLengthType
 class RadialArea(Quantity):

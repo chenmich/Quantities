@@ -16,7 +16,7 @@ class SpecificEnergyType(QuantityType):
     pri_unit = joule_per_kilogram
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(EnergyType, '/', MassType)] = cls
         cls.source[(cls, '*', MassType)] = EnergyType
         cls.source[(MassType, '*', cls)] = EnergyType

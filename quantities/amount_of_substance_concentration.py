@@ -16,7 +16,7 @@ class AmountOfSubstanceConcentrationType(QuantityType):
     pri_unit = mole_per_cubic_meter
     SI_conherent_unit = pri_unit
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(AmountOfSubstanceType, '/', VolumeType)] = cls
         cls.source[(cls, '*', VolumeType)] = AmountOfSubstanceType
         cls.source[(VolumeType, '*', cls)] = AmountOfSubstanceType

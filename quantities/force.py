@@ -15,7 +15,7 @@ class ForceType(quantity_type.QuantityType):
     pri_unit = N
     SI_conherent_unit = pri_unit    
     @classmethod
-    def regist_type(cls):
+    def register_type(cls):
         cls.source[(mass.MassType, '*', acceleration.AccelerationType)] = cls
         cls.source[(acceleration.AccelerationType, "*", mass.MassType)] = cls
         cls.source[(cls, "/", mass.MassType)] = acceleration.AccelerationType
