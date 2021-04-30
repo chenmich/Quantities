@@ -75,9 +75,8 @@ class Quantity():
         if unit not in self.q_type.__dict__.values() or unit == None:
             raise TypeError('The unit is not for this physical qunatity!')
         else:
-            to_pri_coffic = self.current_unit.to_pri_unit()
-            from_pri_coffic = unit.from_pri_unit()
-            value = self.value * to_pri_coffic * from_pri_coffic
+            to_pri_value = self.current_unit.to_pri_unit(self.__value)
+            value = unit.from_pri_unit(to_pri_value)
             return Quantity(value, self.q_type, unit)
     def equal(self, other):
         if not hasattr(other, 'q_type'):

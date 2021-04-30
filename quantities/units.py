@@ -73,11 +73,11 @@ class Unit():
         'express_by_SI':'' 
     }
     @classmethod
-    def from_pri_unit(cls):
-        return 1 /__prefix_value__[cls.prefix['symbol']]
+    def from_pri_unit(cls, value):
+        return value / __prefix_value__[cls.prefix['symbol']]
     @classmethod
-    def to_pri_unit(cls):
-        return __prefix_value__[cls.prefix["symbol"]]
+    def to_pri_unit(cls, value):
+        return value * __prefix_value__[cls.prefix["symbol"]]
     @classmethod
     def symbol(cls):
         tree = ast.parse(cls.profile['symbol'])
@@ -130,7 +130,8 @@ class prefixUnit(Unit):
         else:
             unit_html = this_prefix_html + pri_unit_express[1]
         return unit_latex, unit_html
-    
+
+        
 
 
 class yUnit(prefixUnit):
