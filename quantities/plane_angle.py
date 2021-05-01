@@ -15,6 +15,7 @@ For solid angles, Moment of force, etc., there are also such issues that need to
 Therefore, the classes RadialLength and RadialAreaType are specially designed in the class library 
 to solve such problems.
 '''
+import math
 from .quantity_type import QuantityType
 from .quantity import Quantity
 from .units import Unit
@@ -30,10 +31,51 @@ class radian(Unit):
         "express_by_SI_base":"m/m", 
         "express_by_SI":""
     }
+class degree(Unit):
+    profile = {
+        "name":"degree",
+        "symbol":"°", 
+        "express_by_SI_base":"", 
+        "express_by_SI":""
+    }
+    @classmethod
+    def to_pri_unit(cls, value):
+        return (math.pi / 180) * value
+    def from_pri_unit(cls, value):
+        return (180 / math.pi) * value
+class minute(Unit):
+    profile = {
+        "name":"minute",
+        "symbol":"'", 
+        "express_by_SI_base":"", 
+        "express_by_SI":""
+    }
+    @classmethod
+    def to_pri_unit(cls, value):
+        return (math.pi / 10800) * value
+    def from_pri_unit(cls, value):
+        return (10800 / math.pi) * value
+
+class second(Unit):
+    profile = {
+        "name":"second",
+        "symbol":'''"''', 
+        "express_by_SI_base":"", 
+        "express_by_SI":""
+    }
+    @classmethod
+    def to_pri_unit(cls, value):
+        return (math.pi / 648000) * value
+    def from_pri_unit(cls, value):
+        return (648000 / math.pi) * value
+
 
 class PlaneAngleType(QuantityType):
     pri_unit = radian
     SI_conherent_unit = pri_unit
+    degree = degree
+    minute = minute
+    second = second
     @classmethod
     def register_type(cls):
         cls.source[(LengthType, '/', RadialLengthType)] = cls
