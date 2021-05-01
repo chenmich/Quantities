@@ -38,7 +38,6 @@ class dalton(Unit):
 
 class MassType(QuantityType):
     pri_unit = g
-    SI_conherent_unit = k_unit
     tonne = tonne
     dalton = dalton
     @classmethod
