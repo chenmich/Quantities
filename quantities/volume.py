@@ -11,10 +11,25 @@ class cubic_meter(Unit):
         "express_by_SI_base":"m+3",
         "express_by_SI":""
     }
+class litre(Unit):
+    profile = {
+        "name":"litre",
+        "symbol":"l",
+        "express_by_SI_base":"",
+        "express_by_SI":""
+    }
+    @classmethod
+    def to_pri_unit(cls, value):
+        return value / 1e+3
+    @classmethod
+    def from_pri_unit(cls, value):
+        return value * 1e+3
+    
 
 class VolumeType(QuantityType):
     pri_unit = cubic_meter
     SI_conherent_unit = pri_unit
+    litre = litre
     @classmethod
     def register_type(cls):
         cls.source[(LengthType, '*', AreaType)] = cls
