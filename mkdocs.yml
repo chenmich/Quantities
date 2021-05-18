@@ -1,0 +1,25 @@
+site_name: Physical Quantity Calculating
+nav:
+    - Home: index.md
+    - Quantity model: Quantity.md
+    - Quickstart: Quickstart.md
+    - Usage: Usage.md
+
+
+
+theme: 
+    name: material
+markdown_extensions:
+    - pymdownx.highlight:
+        linenums: true
+        linenums_style: pymdownx.inline
+    - pymdownx.inlinehilite
+    - pymdownx.superfences
+    - pymdownx.snippets
+    - pymdownx.arithmatex:
+        generic: true
+        
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
