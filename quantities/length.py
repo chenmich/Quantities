@@ -27,7 +27,7 @@ class yard(Unit):
 class inch(Unit):
     profile = {
         "name":"inch",
-        "symbol":"″", 
+        "symbol":"inch", 
         "express_by_SI_base":"", 
         "express_by_SI":""
     }
