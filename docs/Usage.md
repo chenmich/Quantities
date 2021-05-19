@@ -1,3 +1,5 @@
+# Usage
+
 ## Physical quantity modeling
 
 Users always perform arithmetic operations such as addition, subtraction, multiplication, and division for physical quantities. These operations are the same, so the interfaces of their physical quantity objects are also the same. For this purpose, a class **Quantity** is used to express the physical quantity. It provides users with a general arithmetic operation interface, and also provides users with an interface to access this physical quantity type. Of course, it also provides operations for setting and obtaining the current unit of measurement.
@@ -9,6 +11,7 @@ Each physical quantity has its own unit of measurement. Use class Unit to expres
 ## create a quantity instance
 
 It is very simple to create an instance of a physical quantity, the following is a code example:
+
 ```python
 import quantities as pq
 q_type = pq.LengthType
@@ -33,6 +36,7 @@ l1 = l.to_unit(q_type.k_unit)
 Set the unit of the quantity by the quantity type, such as LengthType, to ensure the corresponding relationship between the quantity and the unit.
 
 For ease of use, Physical Quantity calculating has also designed a proprietary class for commonly used physical quantities. For example, the physical quantity of the length type is Length, which can be found in pq.
+
 ## quantity calculating
 
 The calculation is also very simple. code show as below:

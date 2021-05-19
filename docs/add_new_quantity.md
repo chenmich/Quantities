@@ -1,6 +1,6 @@
 # Add A New Quantity
 
-Adding a new quantity is very simple, you need to inherit two new classes from the two classes QuantityType and Unit. The former expresses a new type of physical quantity, and the latter expresses a new unit corresponding to the type of physical quantity.Detailed examples can be found in the design of [mass] and [energy].
+Adding a new quantity is very simple, you need to inherit two new classes from the two classes QuantityType and Unit. The former expresses a new type of physical quantity, and the latter expresses a new unit corresponding to the type of physical quantity.Detailed examples can be found in the design of [mass](https://github.com/chenmich/Quantities/blob/master/quantities/mass.py) and [energy](https://github.com/chenmich/Quantities/blob/master/quantities/energy.py).
 
 ## Designing new SI unit class
 
@@ -113,7 +113,7 @@ When overriding the register_type method, add as many meaningful operations as p
 
 In particular, it should be noted that in the design of QuantityType, the class variable source points to an empty dictionary. The source of its subclasses will also point to this dictionary. Each subclass will register for itself the result type of many operations in this dictionary. And in actual operation, the corresponding operation result type will be searched from this dictionary. Therefore, it is strictly forbidden for any subclass to set another dictionary for the source. Otherwise, even if the corresponding physical quantity type has been registered during the design, an error may still be thrown during the calculation process because it cannot be found.Details can be seen in the highlighted part of the aforementioned EnergyType design code snippet
 
-If certain subclasses do not need to specifically register certain operations, they must also override the class method register_type to prevent NotImplemenedError from being thrown. See the design of [LengthType].
+If certain subclasses do not need to specifically register certain operations, they must also override the class method register_type to prevent NotImplemenedError from being thrown. See the design of [LengthType](https://github.com/chenmich/Quantities/blob/master/quantities/length.py).
 
 When designing a new quantity type, it must also be associated with its non-SI units. For example, when designing the quantity type of thermodynamic temperature, it is necessary to associate the class celsius_degree and the class fahrenheit_degree. After the association, the user can call its non-SI unit through this quantity type.The details can be seen in the following example.
 
