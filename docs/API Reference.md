@@ -379,7 +379,7 @@ The meaning of pri_unit has been explained in the design of QuantityType, which 
 ### writing expression
 
 There are usually three ways to write and express units in the SI unit system and other units that are not in the SI unit system. The first is to directly use the symbol of the unit to express the unit. The second is to use the power product of the basic unit of the SI unit system to express. The third is to use the power product of the basic unit of the SI unit system and the derived unit with a specific name to express.  
-Writing may occur in Latex documents or html documents, and the way of expression is different. To this end, Unit provides a total of three methods, each of which can return the content expressed in the two documents. they are, respectively:
+Writing may occur in Latex documents or html documents, and the way of expression is different. To this end, Unit provides a total of three methods, each of which can return the content expressed in the two documents. they are, respectively:  
 **Unit.symbol(cls)**  
 **Unit.express_by_SI_base(cls)**  
 **Unit.express_by_SI(cls)**  
