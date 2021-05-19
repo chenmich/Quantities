@@ -24,12 +24,26 @@ class litre(Unit):
     @classmethod
     def from_pri_unit(cls, value):
         return value * 1e+3
-    
+
+class gallon(Unit):
+    profile = {
+        "name":"gallon",
+        "symbol":"gal",
+        "express_by_SI_base":"",
+        "express_by_SI":""
+    }
+    @classmethod
+    def to_pri_unit(cls, value):
+        return 0.0037854117840007 * value
+    @classmethod
+    def from_pri_unit(cls, value):
+        return value / 0.0037854117840007
 
 class VolumeType(QuantityType):
     pri_unit = cubic_meter
     SI_conherent_unit = pri_unit
     litre = litre
+    gallon = gallon
     @classmethod
     def register_type(cls):
         cls.source[(LengthType, '*', AreaType)] = cls
