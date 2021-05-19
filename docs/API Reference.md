@@ -317,7 +317,9 @@ In Physical Quantity Calculating, the available units of a specific physical qua
 
 3. **20 properties such as QuantityType.g_unit**   The SI unit system design contains 20 prefix units to express the multiples or fractional units of its coherent unit. When the QuantityType was designed, these 20 units were naturally included. Its properties are in the form of prefix followed by _unit. For example, for the length quantity, its coherent unit is m, then its k prefix unit is km, which can be obtained from **LengthType.k_unit**。
 
-4. **Other non-SI units**  In Physical Quantity Calculating, in addition to the SI unit system, some non-SI units of physical quantity, such as feet, inches and other units of length quantity, are also partially realized. There are corresponding class attributes in the subclasses of the corresponding QuantityType. For example, the length in feet can be obtained through LengthType.inch.  
+4. **Other non-SI units**[^1]  In Physical Quantity Calculating, in addition to the SI unit system, some non-SI units of physical quantity, such as feet, inches and other units of length quantity, are also partially realized. There are corresponding class attributes in the subclasses of the corresponding QuantityType. For example, the length in feet can be obtained through LengthType.inch.  
+
+[^1]: The system has added non-SI units for quantity types such as [length](https://github.com/chenmich/Quantities/blob/master/quantities/length.py), [area](https://github.com/chenmich/Quantities/blob/master/quantities/area.py), [volume](https://github.com/chenmich/Quantities/blob/master/quantities/volume.py), [mass](https://github.com/chenmich/Quantities/blob/master/quantities/mass.py), [energy](https://github.com/chenmich/Quantities/blob/master/quantities/energy.py), [plane_angle](https://github.com/chenmich/Quantities/blob/master/quantities/plane_angle.py) and [time](https://github.com/chenmich/Quantities/blob/master/quantities/time.py).
 
 According to the available unit interface of QuantityType, we can write the following code:
 

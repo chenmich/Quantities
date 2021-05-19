@@ -127,3 +127,7 @@ class ThermodynamicTemperatureType(QuantityType):
     def register_type(cls):
         pass
 ```
+
+## Designed physical quantity in the system
+
+When this system was released, most of the physical quantity types had been designed based on the content of SI. [Details](https://github.com/chenmich/Quantities/blob/master/quantities/__init__.py) can be seen in the contents of the software package.
