@@ -4,19 +4,19 @@ The Physical Quantities Calculating class library is developed in the Python 3.8
 
 ## Feature
 
-- There is only a simple interface for the arithmetic calculation of physical quantities and the selection of measurement units. 
-- New types of physical quantities are automatically generated for calculation and automatic unit conversion. 
-- It can handle most of the SI unit system units and non-SI unit system units selected by the SI unit system. For example, the minute, hour, day, month, and year of time, etc. 
+- There is only a simple interface for the arithmetic calculation of physical quantities and the selection of measurement units.  
+- New types of physical quantities are automatically generated for calculation and automatic unit conversion.  
+- It can handle most of the SI unit system units and non-SI unit system units selected by the SI unit system. For example, the minute, hour, day, month, and year of time, etc.  
 - By simply subclassing the base class method, new physical quantities and their units of measurement can be easily generated for easy expansion.
 - Use Identity to express the concept of unitless quantity
 
 ## Install
 
-### install frow PyPi:
+### install frow PyPi  
 
 pip install quantities
 
-### download from github:
+### download from github  
 
 ## Version
 
