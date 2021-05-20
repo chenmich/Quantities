@@ -1,0 +1,1149 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+    
+    
+      
+        <title>API Reference - Physical Quantity Calculating</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f955dcd.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Physical Quantity Calculating" class="md-header__button md-logo" aria-label="Physical Quantity Calculating" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Physical Quantity Calculating
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Physical Quantity Calculating" class="md-nav__button md-logo" aria-label="Physical Quantity Calculating" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Physical Quantity Calculating
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Quantity_Model/" class="md-nav__link">
+        Quantity Model
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Quickstart/" class="md-nav__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add_new_quantity/" class="md-nav__link">
+        Add New Quantity
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        API Reference
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-of-the-quantity-class" class="md-nav__link">
+    API of the Quantity class
+  </a>
+  
+    <nav class="md-nav" aria-label="API of the Quantity class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-operations" class="md-nav__link">
+    Arithmetic operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-operation" class="md-nav__link">
+    Comparison operation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-methods" class="md-nav__link">
+    Other methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-only-read-properties" class="md-nav__link">
+    Three only-read properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-of-the-quantitytype-class" class="md-nav__link">
+    API of the QuantityType class
+  </a>
+  
+    <nav class="md-nav" aria-label="API of the QuantityType class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-units" class="md-nav__link">
+    Available units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-new-quantitytype-subclass" class="md-nav__link">
+    Register new QuantityType subclass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantitytypesource" class="md-nav__link">
+    QuantityType.source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-of-the-unit-class" class="md-nav__link">
+    API of the Unit class
+  </a>
+  
+    <nav class="md-nav" aria-label="API of the Unit class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-conversion" class="md-nav__link">
+    Unit conversion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-expression" class="md-nav__link">
+    writing expression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unitq_type-class-property" class="md-nav__link">
+    Unit.q_type class property
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-of-the-quantity-class" class="md-nav__link">
+    API of the Quantity class
+  </a>
+  
+    <nav class="md-nav" aria-label="API of the Quantity class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-operations" class="md-nav__link">
+    Arithmetic operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-operation" class="md-nav__link">
+    Comparison operation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-methods" class="md-nav__link">
+    Other methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-only-read-properties" class="md-nav__link">
+    Three only-read properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-of-the-quantitytype-class" class="md-nav__link">
+    API of the QuantityType class
+  </a>
+  
+    <nav class="md-nav" aria-label="API of the QuantityType class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-units" class="md-nav__link">
+    Available units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-new-quantitytype-subclass" class="md-nav__link">
+    Register new QuantityType subclass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantitytypesource" class="md-nav__link">
+    QuantityType.source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-of-the-unit-class" class="md-nav__link">
+    API of the Unit class
+  </a>
+  
+    <nav class="md-nav" aria-label="API of the Unit class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-conversion" class="md-nav__link">
+    Unit conversion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-expression" class="md-nav__link">
+    writing expression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unitq_type-class-property" class="md-nav__link">
+    Unit.q_type class property
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="api-reference">API Reference</h1>
+<p>The API of Physical Quantity Calculating mainly includes the arithmetic and comparison of Quantity class, as well as the operation of transforming units such as <code class="highlight"><span class="n">to_unit</span></code>. We also need to pay special attention to the <code class="highlight"><span class="n">register</span></code> method of QuantityType. The methods of the Unit class are also very interesting, involving unit conversion and unit writing expression.</p>
+<h2 id="api-of-the-quantity-class">API of the Quantity class</h2>
+<p>Quantity is the main class for programming to operate, and it is the base class for all physical quantities。It has arithmetic operations and comparison operations, in particular it also has conversion unit operations, these operations realize the calculation of the number and the conversion of units. It is an operation that is often used in programming.</p>
+<h3 id="arithmetic-operations">Arithmetic operations</h3>
+<p><strong>Quantity.add(self, other)</strong>:　This method provides operation of the same type of physical quantity. If the parameter other is not of the same type, a ValueError exception will be thrown.　The method returns a physical quantity whose type is the same as the type of the physical quantity participating in the operation. The unit is the SI coherent unit of the physical quantity.</p>
+<p><strong>Quantity.substract(self, other)</strong>:　This method provides  operation of the same type of physical quantity. If the parameter other is not of the same type, a ValueError exception will be thrown. The method returns a physical quantity whose type is the same as the type of the physical quantity participating in the operation. The unit is the SI coherent unit of the physical quantity.</p>
+<p><strong>Quantity.multiply(self, other)</strong>:　This method returns the product of the physical quantity and other types of parameters. The system will Can return diversified results.</p>
+<ol>
+<li>If the parameter other is of type float or int, the return result is a physical quantity whose type is the same as this physical quantity, and the unit is the same as this physical quantity, except that its value is equal to the result of multiplying the value of this physical quantity with other.</li>
+<li>When other is an ohter non-Quantity type, a ValueError exception will be thrown</li>
+<li>When ohter is a subtype Identity of Quantity, or when the physical quantity is Identity, the returned result is the same as the first case.</li>
+<li>If other is of type Quantity or its subtypes, but the system cannot determine the type after multiplication, it will throw TypeError exception.</li>
+</ol>
+<p>The following is an example of the application. Please carefully observe the running results of this example program.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">length</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">identity</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">velocity</span>
+
+
+<span class="n">l</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">length</span><span class="o">.</span><span class="n">LengthType</span><span class="o">.</span><span class="n">mu_unit</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">identity</span><span class="o">.</span><span class="n">Identity</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">velocity</span><span class="o">.</span><span class="n">Velocity</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">l1</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l1</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">symbol</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l2</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l2</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">symbol</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l3</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l3</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">symbol</span><span class="p">())</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A TypeError is thrown!&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>The running results of the program are as follows:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="mi">768</span>
+<span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">mu m&#39;</span><span class="p">,</span> <span class="s1">&#39;μm&#39;</span><span class="p">)</span>
+<span class="mf">0.000768</span>
+<span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">)</span>
+<span class="mf">384.0</span>
+<span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">)</span>
+<span class="n">A</span> <span class="ne">TypeError</span> <span class="ow">is</span> <span class="n">thrown</span><span class="err">!</span>
+</code></pre></div>
+</td></tr></table>
+<p>l1 is an result of the length quantity multiplied by an integer, so it is still a length quantity, and its current unit is still μm. And l2 is an result of the length quantity multiplied by an instance of the Identity quantity, the it is still the length quantity, but its unit is the SI coherent unit of this quantity. We provide an interface for multiplying integers or floating-point numbers, but we still recommend using a physical quantity to multiply an instance of Identity, so that the physical concept is clearer.</p>
+<p><strong>Quantity.__mul__(self, other)</strong><br />
+<strong>Quantity.__rmul__(self, other)</strong></p>
+<p>These two functions are magic methods of the python class, which also express multiplication, and the<code class="highlight"><span class="fm">__rmul__</span><span class="p">()</span></code> method expresses the concept of right multiplication. With these two functions, we can write the following code:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">length</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">identity</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">velocity</span>
+
+
+<span class="n">l</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">length</span><span class="o">.</span><span class="n">LengthType</span><span class="o">.</span><span class="n">mu_unit</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">identity</span><span class="o">.</span><span class="n">Identity</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">velocity</span><span class="o">.</span><span class="n">Velocity</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">l1</span> <span class="o">=</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">l</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">l</span> <span class="o">*</span> <span class="mi">24</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">l</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">l</span> <span class="o">*</span> <span class="n">i</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="n">v</span> <span class="o">*</span> <span class="n">t</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="n">t</span> <span class="o">*</span> <span class="n">v</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">v</span> <span class="o">*</span> <span class="n">l</span>
+<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+    <span class="k">pass</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">l</span> <span class="o">*</span> <span class="n">v</span>
+<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+    <span class="k">pass</span>
+</code></pre></div>
+</td></tr></table>
+<p>The running result is consistent with the running result of the sample code of the Quantity.multiply method.</p>
+<p><strong>Quantitiy.divide(self, other)</strong><br />
+<strong>Quantity.__truediv__(self, other)</strong></p>
+<p>The functions of these two functions are the same, and both express the division of physical quantities. According to the different types of the parameter ohter, the system will return different results.</p>
+<ol>
+<li>If the parameter other is of type float or int, the return result is a physical quantity whose type is the same as this physical quantity, and the unit is the same as this physical quantity, except that its value is equal to the result of dividing the value of this physical quantity with other.</li>
+<li>When other is an ohter non-Quantity type, a ValueError exception will be thrown</li>
+<li>When ohter is a subtype Identity of Quantity, or when the physical quantity is Identity, the returned result is the same as the first case.</li>
+<li>If other is of type Quantity or its subtypes, but the system cannot determine the type after division, it will throw TypeError exception.</li>
+</ol>
+<p>Based on these characteristics, we can write the following code:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">force</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">length</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">force</span><span class="o">.</span><span class="n">Force</span><span class="p">(</span><span class="mi">53</span><span class="p">,</span> <span class="n">force</span><span class="o">.</span><span class="n">ForceType</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">TimeType</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span> <span class="n">length</span><span class="o">.</span><span class="n">LengthType</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">l</span> <span class="o">/</span> <span class="n">t</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">v</span> <span class="o">/</span> <span class="n">t</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">f</span> <span class="o">/</span> <span class="n">a</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">express_by_SI_base</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">express_by_SI_base</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">symbol</span><span class="p">())</span>
+</code></pre></div>
+</td></tr></table>
+<p>The results of this code snippet are as follows:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="mf">110.0</span>
+<span class="p">(</span><span class="s1">&#39;m/s&#39;</span><span class="p">,</span> <span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="mf">0.36666666666666664</span>
+<span class="p">(</span><span class="s1">&#39;m</span><span class="se">\\</span><span class="s1">cdot s^{-2}&#39;</span><span class="p">,</span> <span class="s1">&#39;m·s&lt;sup&gt;-2&lt;/sup&gt;&#39;</span><span class="p">)</span>
+<span class="mf">144545.45454545456</span>
+<span class="p">(</span><span class="s1">&#39;kg&#39;</span><span class="p">,</span> <span class="s1">&#39;kg&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Because physical quantities have different physical meanings when dividing right by other types of data, we do not set the right dividing method in this API.</p>
+<h3 id="comparison-operation">Comparison operation</h3>
+<p><strong>Quantity.equal(self, other)</strong><br />
+<strong>Quantity.__eq__(self, other)</strong></p>
+<p>These two methods judge whether two physical quantities are equal. Its meaning is the same as the equality judgment of ordinary types.</p>
+<ol>
+<li>The two physical quantities are equal only when the q_types of two instances of the class Quantity or its subclasses are equal, under the premise that they are all converted to the same unit, and their <code class="highlight"><span class="n">value</span></code> values are also equal.</li>
+<li>When the parameter other is not an instance of Quantity or its subclasses, these two methods will throw a ValueError exception.</li>
+<li>When parameter other is an instance of Quantity or its subclasses, but the q_types of the two are not the same, it means that they are not the same type of physical quantity. These two methods will throw a TypeError exception.</li>
+</ol>
+<p>Using these two methods, we can write the following code:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">force</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">length</span>
+
+<span class="n">l1</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">length</span><span class="o">.</span><span class="n">LengthType</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mi">32000</span><span class="p">)</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span> <span class="n">length</span><span class="o">.</span><span class="n">LengthType</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">l1</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">==</span> <span class="n">l2</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">l1</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">l3</span><span class="p">)</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">==</span> <span class="n">l3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">l1</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="mi">32000</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">l1</span> <span class="o">==</span> <span class="mi">32000</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">l1</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">l1</span> <span class="o">==</span> <span class="n">t</span>
+<span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>The output after running this code snippet is:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kc">True</span>
+<span class="kc">False</span>
+<span class="n">These</span> <span class="n">two</span> <span class="n">physical</span> <span class="n">quantities</span> <span class="n">can</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">compared</span> <span class="n">now</span><span class="err">!</span>
+<span class="n">These</span> <span class="n">two</span> <span class="n">physical</span> <span class="n">quantities</span> <span class="n">can</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">compared</span> <span class="n">now</span><span class="err">!</span>
+<span class="n">The</span> <span class="n">two</span> <span class="n">physical</span> <span class="n">quantities</span> <span class="n">are</span> <span class="n">of</span> <span class="n">different</span> <span class="n">types</span><span class="err">!</span>
+<span class="n">The</span> <span class="n">two</span> <span class="n">physical</span> <span class="n">quantities</span> <span class="n">are</span> <span class="n">of</span> <span class="n">different</span> <span class="n">types</span><span class="err">!</span>
+</code></pre></div>
+</td></tr></table>
+<p><strong>Quantity.le(self, other)</strong><br />
+<strong>Quantity.__le__(self, other)</strong></p>
+<p><strong>Quantity.ge(self, other)</strong><br />
+<strong>Quantity.__ge__(self, other)</strong></p>
+<p><strong>Quantity.lt(self, other)</strong><br />
+<strong>Quantity.__lt__(self, other)</strong></p>
+<p><strong>Quantity.gt(self, other)</strong><br />
+<strong>Quantity.__gt__(self, other)</strong></p>
+<p>In these four groups of methods, each group has two methods with the same function, which have exactly the same meaning as the ordinary comparison method.</p>
+<ol>
+<li>The q_types of two instances of the Quantity class or one of its subclasses are equal, and their <code class="highlight"><span class="n">value</span></code> values can be compared only when they are converted to the same unit.</li>
+<li>When the parameter other is not an instance of Quantity or its subclasses, these two methods will throw a ValueError exception.</li>
+<li>When parameter other is an instance of Quantity or its subclasses, but the q_types of the two are not the same, it means that they are not the same type of physical quantity. These two methods will throw a TypeError exception.</li>
+</ol>
+<p>According to these four groups of methods, we can write the following code:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">length</span>
+
+<span class="n">l1</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">length</span><span class="o">.</span><span class="n">LengthType</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mi">2001</span><span class="p">)</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="n">l2</span><span class="o">.</span><span class="n">gt</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="n">l2</span> <span class="o">&gt;</span> <span class="n">l1</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">l1</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">&lt;</span> <span class="n">l2</span>
+
+<span class="n">c3</span> <span class="o">=</span> <span class="n">l2</span><span class="o">.</span><span class="n">ge</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+<span class="n">c3</span> <span class="o">=</span> <span class="n">l2</span> <span class="o">&gt;=</span> <span class="n">l1</span>
+<span class="n">c4</span> <span class="o">=</span> <span class="n">l1</span><span class="o">.</span><span class="n">le</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
+<span class="n">c4</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">&lt;=</span> <span class="n">l2</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">TimeType</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c4</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">l2</span> <span class="o">&gt;=</span> <span class="mi">2000</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">l2</span> <span class="o">&gt;=</span> <span class="n">t</span>
+<span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>The results of this code snippet are as follows:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kc">True</span>
+<span class="kc">True</span>
+<span class="kc">True</span>
+<span class="kc">True</span>
+<span class="n">These</span> <span class="n">two</span> <span class="n">physical</span> <span class="n">quantities</span> <span class="n">can</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">compared</span> <span class="n">now</span><span class="err">!</span>
+<span class="n">The</span> <span class="n">two</span> <span class="n">physical</span> <span class="n">quantities</span> <span class="n">are</span> <span class="n">of</span> <span class="n">different</span> <span class="n">types</span><span class="err">!</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="other-methods">Other methods</h3>
+<p><strong>Quantity.__init__(self, value:float, q_type:QuantityType, unit=None)</strong>  </p>
+<p>This is the constructor of the physical quantity. Its first parameter <code class="highlight"><span class="n">value</span></code> expresses the specific value of the physical quantity in a specific unit. It is a floating point number. The second parameter <code class="highlight"><span class="n">q_type</span></code> is the <code class="highlight"><span class="n">QuantityType</span></code> class or its subclasses. It expresses the type of this physical quantity. For example, the physical quantity of length, its type is <code class="highlight"><span class="n">LengthType</span></code>. It determines the characteristics of this physical quantity. The third parameter <code class="highlight"><span class="n">unit</span></code> expresses the unit of some physical quantity. By default, the SI coherent unit of this type is selected.</p>
+<p>Under normal circumstances, this constructor is rarely used. We would rather inherit the Quantity class to generate a new subclass for a certain physical quantity, and specify its physical quantity type in the subclass to determine its characteristics. For example, the <code class="highlight"><span class="n">LengthType</span></code> class is a subclass of <code class="highlight"><span class="n">QuantityType</span></code>, which is the type we designed for the physical quantity of length. At the same time, we will design  class <code class="highlight"><span class="n">Length</span></code>, which is the subclass of <code class="highlight"><span class="n">Quantity</span></code>, to express the physical quantity of length, and directly specify its <code class="highlight"><span class="n">q_type</span></code> attribute in the constructor. For details, please refer to [Lenght].  </p>
+<p><strong>Quantity.to_unit(self, unit)</strong>：This method can achieve unit conversion, it will return a new Quantity or an instance of its subclass. Quantity and its subclasses are immutable object classes.<br />
+If the parameter <code class="highlight"><span class="n">unit</span></code> does not match the physical quantity type expressed by an instance of Quantity or its subclass, the method will throw a <code class="highlight"><span class="ne">TypeError</span></code> exception. For example, if an instance of  Quantity expresses the length physical quantity, but we pass in the unit of the mass physical quantity type in <code class="highlight"><span class="n">to_unit</span></code>, or pass in None, it will throw a TypeError exception.
+Using this method we can write the following code:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">length</span>
+
+<span class="n">l1</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">length</span><span class="o">.</span><span class="n">LengthType</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+<span class="n">l_type</span> <span class="o">=</span> <span class="n">l1</span><span class="o">.</span><span class="n">q_type</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">l1</span><span class="o">.</span><span class="n">to_unit</span><span class="p">(</span><span class="n">l_type</span><span class="o">.</span><span class="n">SI_conherent_unit</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">l2</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="mi">2000</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="three-only-read-properties">Three only-read properties</h3>
+<p><strong>Quantity.value(self)</strong>：This is a getter property that expresses the specific value of this physical quantity in the currently selected unit condition. Only using this property and the  <code class="highlight"><span class="n">current_unit</span></code> property at the same time can fully express a physical quantity.<br />
+<strong>Quantity.q_type(self)</strong>：This property expresses the type of this physical quantity.<br />
+<strong>Quantity.current_unit</strong>：This property expresses the currently selected unit of this physical quantity。</p>
+<h2 id="api-of-the-quantitytype-class">API of the QuantityType class</h2>
+<p><code class="highlight"><span class="n">QuantityType</span></code> is a very important class. Based on it, the physical quantity type expressed by the instance of Quantity and its subclasses can be determined, and the available unit of a certain physical quantity type in the Physical Quantity Calculating system can also be determined according to it. Based on it, the system can determine the new physical quantity after the calculation.
+Because each physical quantity has a unique type, only one instance of QuantityType is required for each physical quantity, and this instance is the class object of QuantityType and its subclasses, which has global uniqueness. Therefore, the programming interfaces we are going to discuss are all class properties and class methods.</p>
+<h3 id="available-units">Available units</h3>
+<p>In Physical Quantity Calculating, the available units of a specific physical quantity can be obtained in QuantityType and its subclasses. They are divided into four categories.  </p>
+<ol>
+<li>
+<p><strong>QuantityType.pri_unit</strong>  The first category is the primary unit. This unit is the starting point for designing other units. For example, the primary unit of the length unit is m, and the primary unit of the mass unit is g.</p>
+</li>
+<li>
+<p><strong>QuantityType.SI_conherent_unit</strong>  The second category is the coherent unit of the SI unit system. Generally, the primary unit of a physical quantity is often the same as its coherent unit, but there are exceptions. For example, in the mass unit, g is its primary unit, which facilitates the design of the entire system. But the coherent unit of its SI unit system is kg.</p>
+</li>
+<li>
+<p><strong>20 properties such as QuantityType.g_unit</strong>   The SI unit system design contains 20 prefix units to express the multiples or fractional units of its coherent unit. When the QuantityType was designed, these 20 units were naturally included. Its properties are in the form of prefix followed by _unit. For example, for the length quantity, its coherent unit is m, then its k prefix unit is km, which can be obtained from <strong>LengthType.k_unit</strong>。</p>
+</li>
+<li>
+<p><strong>Other non-SI units</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>  In Physical Quantity Calculating, in addition to the SI unit system, some non-SI units of physical quantity, such as feet, inches and other units of length quantity, are also partially realized. There are corresponding class attributes in the subclasses of the corresponding QuantityType. For example, the length in feet can be obtained through LengthType.inch.  </p>
+</li>
+</ol>
+<p>According to the available unit interface of QuantityType, we can write the following code:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">length</span>
+
+<span class="hll"><span class="n">l1</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">length</span><span class="o">.</span><span class="n">LengthType</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+</span><span class="hll"><span class="n">l2</span> <span class="o">=</span> <span class="n">l1</span><span class="o">.</span><span class="n">to_unit</span><span class="p">(</span><span class="n">length</span><span class="o">.</span><span class="n">LengthType</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span>
+</span><span class="nb">print</span><span class="p">(</span><span class="n">l2</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l2</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">symbol</span><span class="p">())</span>
+</code></pre></div>
+</td></tr></table>
+<p>The results of this code snippet are as follows:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="mf">78740.15748031497</span>
+<span class="p">(</span><span class="s1">&#39;inch&#39;</span><span class="p">,</span> <span class="s1">&#39;inch&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="register-new-quantitytype-subclass">Register new QuantityType subclass</h3>
+<p><code class="highlight"><span class="n">QuantityType</span></code> and its subclasses have a class method <code class="highlight"><span class="n">register_type</span></code>. It will register a subclass of <code class="highlight"><span class="n">QuantityType</span></code> with the system to let the system know how this type is obtained through arithmetic calculations. Generally, when designing a new <code class="highlight"><span class="n">QuantityType</span></code> subclass, you must override this method, but do not modify it during programming.</p>
+<h3 id="quantitytypesource">QuantityType.source</h3>
+<p>All QuantityType and its subclasses have a <code class="highlight"><span class="n">source</span></code> property. This property points to a dictionary that contains information about all types of physical quantities. Generally, it is only necessary to add new content to the dictionary pointed to by <code class="highlight"><span class="n">source</span></code> by overriding its register_type class method when designing a subclass of QuantityType. When programming, <strong>never modify</strong> the <code class="highlight"><span class="n">source</span></code> so that it points to other content, and <strong>do not modify</strong> the content of the dictionary it points to.</p>
+<p>For details about the <code class="highlight"><span class="n">register_type</span></code> method and the property <code class="highlight"><span class="n">source</span></code>, please refer to <a href="/add_new_quantity/">Add A New Quantity</a></p>
+<h2 id="api-of-the-unit-class">API of the Unit class</h2>
+<p>Unit expresses the unit of physical quantity. It only needs one instance, unlike Quantity, which requires multiple instances to express multiple instances of the same type of physical quantity. In the Pyhton programming language, a class is also an object, and the class object is unique in the global scope. Therefore, we use class objects to express various units of various types of physical quantities. Therefore, in Physical Quantity Calculating, the methods of Unit and its subclasses are all class methods. These methods are divided into three categories, one is used for unit conversion, the another is used for writing expression, and the last is <code class="highlight"><span class="n">q_type</span></code> property.  </p>
+<h3 id="unit-conversion">Unit conversion</h3>
+<p>It is only necessary to design two unit conversion methods for each unit, one is used for calculation of conversion from this unit to another unit, and the other is used for calculation of conversion from another unit to this unit. There are these two methods to ensure that the unit can be freely converted between the same type of physical unit. For details, see the pattern of Figure 3.3 in <a href="https://martinfowler.com/apsupp/apchap3.pdf">UML Diagrams for Chapter 3 of Analysis Patterns</a>。</p>
+<p>The two specific methods are as follows:<br />
+<strong>Unit.from_pri_unit(cls, value)</strong><br />
+<strong>Unit.to_pri_unit(cls, value)</strong><br />
+The two specific methods are as follows. Their parameter value refers to the specific digital value in the current unit. For example, the current unit of the physical quantity of length is m, and its numerical value is 1000. It needs to be converted to a unit such as km. Such problems are often dealt with in Quantity.to_unit, the code is as follows:  </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Quantity</span>
+    <span class="o">......</span>
+    <span class="k">def</span> <span class="nf">to_unit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">unit</span><span class="p">:</span><span class="n">Unit</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">unit</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">q_type</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="ow">or</span> <span class="n">unit</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;The unit is not for this physical qunatity!&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+<span class="hll">                <span class="n">to_pri_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">to_pri_unit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__value</span><span class="p">)</span>
+</span><span class="hll">                <span class="n">value</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">from_pri_unit</span><span class="p">(</span><span class="n">to_pri_value</span><span class="p">)</span>
+</span>                <span class="k">return</span> <span class="n">Quantity</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">q_type</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>The meaning of pri_unit has been explained in the design of QuantityType, which can be seen <a href="/add_new_quantity/">in detail</a>.</p>
+<h3 id="writing-expression">writing expression</h3>
+<p>There are usually three ways to write and express units in the SI unit system and other units that are not in the SI unit system. The first is to directly use the symbol of the unit to express the unit. The second is to use the power product of the basic unit of the SI unit system to express. The third is to use the power product of the basic unit of the SI unit system and the derived unit with a specific name to express.<br />
+Writing may occur in Latex documents or html documents, and the way of expression is different. To this end, Unit provides a total of three methods, each of which can return the content expressed in the two documents. they are, respectively:<br />
+<strong>Unit.symbol(cls)</strong><br />
+<strong>Unit.express_by_SI_base(cls)</strong><br />
+<strong>Unit.express_by_SI(cls)</strong><br />
+Each method returns a tuple, which contains latex writing and html writing strings. The following code illustrates this:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">length</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">acceleration</span>
+<span class="kn">from</span> <span class="nn">quantities</span> <span class="kn">import</span> <span class="n">energy</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">acceleration</span><span class="o">.</span><span class="n">Acceleration</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">energy</span><span class="o">.</span><span class="n">Energy</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">symbol</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">express_by_SI_base</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">express_by_SI</span><span class="p">())</span>
+</code></pre></div>
+</td></tr></table>
+<p>The results of this code snippet are as follows:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;m</span><span class="se">\\</span><span class="s1">cdot s^{-2}&#39;</span><span class="p">,</span> <span class="s1">&#39;m·s&lt;sup&gt;-2&lt;/sup&gt;&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;N</span><span class="se">\\</span><span class="s1">cdot m&#39;</span><span class="p">,</span> <span class="s1">&#39;N·m&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="unitq_type-class-property">Unit.q_type class property</h3>
+<p>This property returns a class object of a subclass of QuantityType. It indicates that this unit can only be used for the physical quantity specified by <code class="highlight"><span class="n">q_type</span></code>, and is a usable unit of this physical quantity type.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>The system has added non-SI units for quantity types such as <a href="https://github.com/chenmich/Quantities/blob/master/quantities/length.py">length</a>, <a href="https://github.com/chenmich/Quantities/blob/master/quantities/area.py">area</a>, <a href="https://github.com/chenmich/Quantities/blob/master/quantities/volume.py">volume</a>, <a href="https://github.com/chenmich/Quantities/blob/master/quantities/mass.py">mass</a>, <a href="https://github.com/chenmich/Quantities/blob/master/quantities/energy.py">energy</a>, <a href="https://github.com/chenmich/Quantities/blob/master/quantities/plane_angle.py">plane_angle</a> and <a href="https://github.com/chenmich/Quantities/blob/master/quantities/time.py">time</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../add_new_quantity/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Add New Quantity
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

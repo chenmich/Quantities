@@ -1,0 +1,562 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+    
+    
+      
+        <title>Usage - Physical Quantity Calculating</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f955dcd.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#usage" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Physical Quantity Calculating" class="md-header__button md-logo" aria-label="Physical Quantity Calculating" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Physical Quantity Calculating
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Usage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Physical Quantity Calculating" class="md-nav__button md-logo" aria-label="Physical Quantity Calculating" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Physical Quantity Calculating
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Quantity_Model/" class="md-nav__link">
+        Quantity Model
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Quickstart/" class="md-nav__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Usage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Usage
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#physical-quantity-modeling" class="md-nav__link">
+    Physical quantity modeling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-quantity-instance" class="md-nav__link">
+    create a quantity instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantity-calculating" class="md-nav__link">
+    quantity calculating
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add_new_quantity/" class="md-nav__link">
+        Add New Quantity
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API%20Reference/" class="md-nav__link">
+        API Reference
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#physical-quantity-modeling" class="md-nav__link">
+    Physical quantity modeling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-quantity-instance" class="md-nav__link">
+    create a quantity instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantity-calculating" class="md-nav__link">
+    quantity calculating
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="usage">Usage</h1>
+<h2 id="physical-quantity-modeling">Physical quantity modeling</h2>
+<p>Users always perform arithmetic operations such as addition, subtraction, multiplication, and division for physical quantities. These operations are the same, so the interfaces of their physical quantity objects are also the same. For this purpose, a class <strong>Quantity</strong> is used to express the physical quantity. It provides users with a general arithmetic operation interface, and also provides users with an interface to access this physical quantity type. Of course, it also provides operations for setting and obtaining the current unit of measurement.</p>
+<p>Use the quantity type class to distinguish the type of physical quantity, for example, use class <strong>LengthType</strong> as the type of quantity object for length quantity. The quantity type is responsible for generating the corresponding SI unit, checking the legality of addition, subtraction, multiplication and division between two objects, generating a new quantity, and responsible for the unit conversion of the quantity.</p>
+<p>Each physical quantity has its own unit of measurement. Use class Unit to express these units. Each type of physical quantity has its own set of units. These units are automatically created when creating the class of their physical quantity type, and can be selected by the user according to the corresponding type class.</p>
+<h2 id="create-a-quantity-instance">create a quantity instance</h2>
+<p>It is very simple to create an instance of a physical quantity, the following is a code example:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">quantities</span> <span class="k">as</span> <span class="nn">pq</span>
+<span class="n">q_type</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">LengthType</span>
+<span class="n">current_u</span> <span class="o">=</span> <span class="n">q_type</span><span class="o">.</span><span class="n">G_unit</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="n">q_type</span><span class="p">,</span> <span class="n">current_u</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>If you use the default SI coherent unit, you do not need to give the unit to the constructor.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">quantities</span> <span class="k">as</span> <span class="nn">pq</span>
+<span class="n">q_type</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">LengthType</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="n">q_type</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>The unit of the quantity object of this length type is meter. If you want to convert to other units, such as kilometers, the code can be written as:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">l1</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">to_unit</span><span class="p">(</span><span class="n">q_type</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Set the unit of the quantity by the quantity type, such as LengthType, to ensure the corresponding relationship between the quantity and the unit.</p>
+<p>For ease of use, Physical Quantity calculating has also designed a proprietary class for commonly used physical quantities. For example, the physical quantity of the length type is Length, which can be found in pq.</p>
+<h2 id="quantity-calculating">quantity calculating</h2>
+<p>The calculation is also very simple. code show as below:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">quantities</span> <span class="k">as</span> <span class="nn">pq</span>
+<span class="n">q_type</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">LengthType</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="n">q_type</span><span class="p">)</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">to_unit</span><span class="p">(</span><span class="n">q_type</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">l1</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">symbol</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">express_by_SI</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">current_unit</span><span class="o">.</span><span class="n">express_by_SI_base</span><span class="p">())</span>
+</code></pre></div>
+</td></tr></table>
+<p>The unit of the calculation result is the SI coherent unit of the result quantity type.</p>
+<p>Because there are three ways to express the SI unit, one is to use the symbol of the unit, for example, the basic unit uses its symbol to express the unit, and some derived units use the power product of the basic unit, and some also use the power product of basic unit and  the derived unit with the specific name. To express these measurement units in various documents, there are Latex expressions and html expressions, so the Unit class provides three methods for expressing a certain unit, and each method returns two expressions.</p>
+<p>When writing a document, the method that needs to be used in the program is determined by the user. The user needs to fully understand the writing method of units in the SI unit system, and this professional domain knowledge.</p>
+<p>It also supports calculations under traditional codes:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">quantities</span> <span class="k">as</span> <span class="nn">pq</span>
+<span class="n">q_type</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">LengthType</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="n">q_type</span><span class="p">)</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">to_unit</span><span class="p">(</span><span class="n">q_type</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">/</span> <span class="n">t</span>
+</code></pre></div>
+</td></tr></table>
+<p>It also supports the calculation of physical quantities and single real numbers (or integers), such as:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">quantities</span> <span class="k">as</span> <span class="nn">pq</span>
+<span class="n">q_type</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">LengthType</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="n">q_type</span><span class="p">)</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">to_unit</span><span class="p">(</span><span class="n">q_type</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+
+<span class="n">l2</span> <span class="o">=</span> <span class="mi">32</span> <span class="o">*</span> <span class="n">l1</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">*</span> <span class="mi">32</span>
+<span class="n">l4</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">/</span> <span class="mi">32</span>
+</code></pre></div>
+</td></tr></table>
+<p>However, the physical meaning of the calculation between a quantity and an integer or a real number is not clear. This way of writing is not recommended and I prefer to write the following code. This physical meaning is very clear.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">quantities</span> <span class="k">as</span> <span class="nn">pq</span>
+<span class="n">q_type</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">LengthType</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="n">q_type</span><span class="p">)</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">to_unit</span><span class="p">(</span><span class="n">q_type</span><span class="o">.</span><span class="n">k_unit</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">Identity</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">l1</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">*</span> <span class="n">i</span>
+<span class="n">l4</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">/</span> <span class="n">i</span>
+</code></pre></div>
+</td></tr></table>
+<p>Identity is a physical quantity without a unit. The calculation result of multiplication and division between it and any physical quantity is the same as that of the original physical quantity, which has a clear physical meaning.</p>
+<p>Through this kind of clear knowledge of the type of new physical quantity generated at every step, we only need to be familiar with the modeling field, or with the help of domain experts, the bugs in the program will be reduced a lot, even if there is a bug, because the concept is clear, the debug is also It will be easier.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Quickstart/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Quickstart
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../add_new_quantity/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Add New Quantity
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

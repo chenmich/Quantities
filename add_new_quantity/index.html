@@ -1,0 +1,639 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+    
+    
+      
+        <title>Add New Quantity - Physical Quantity Calculating</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f955dcd.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#add-a-new-quantity" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Physical Quantity Calculating" class="md-header__button md-logo" aria-label="Physical Quantity Calculating" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Physical Quantity Calculating
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Add New Quantity
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Physical Quantity Calculating" class="md-nav__button md-logo" aria-label="Physical Quantity Calculating" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Physical Quantity Calculating
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Quantity_Model/" class="md-nav__link">
+        Quantity Model
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Quickstart/" class="md-nav__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Add New Quantity
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Add New Quantity
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#designing-new-si-unit-class" class="md-nav__link">
+    Designing new SI unit class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-non-si-unit-class" class="md-nav__link">
+    Design non-SI unit class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-unit-conversion-relationship" class="md-nav__link">
+    Design unit conversion relationship
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-new-quantity-type" class="md-nav__link">
+    Design new quantity type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designed-physical-quantity-in-the-system" class="md-nav__link">
+    Designed physical quantity in the system
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API%20Reference/" class="md-nav__link">
+        API Reference
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#designing-new-si-unit-class" class="md-nav__link">
+    Designing new SI unit class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-non-si-unit-class" class="md-nav__link">
+    Design non-SI unit class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-unit-conversion-relationship" class="md-nav__link">
+    Design unit conversion relationship
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-new-quantity-type" class="md-nav__link">
+    Design new quantity type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designed-physical-quantity-in-the-system" class="md-nav__link">
+    Designed physical quantity in the system
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="add-a-new-quantity">Add A New Quantity</h1>
+<p>Adding a new quantity is very simple, you need to inherit two new classes from the two classes QuantityType and Unit. The former expresses a new type of physical quantity, and the latter expresses a new unit corresponding to the type of physical quantity.Detailed examples can be found in the design of <a href="https://github.com/chenmich/Quantities/blob/master/quantities/mass.py">mass</a> and <a href="https://github.com/chenmich/Quantities/blob/master/quantities/energy.py">energy</a>.</p>
+<h2 id="designing-new-si-unit-class">Designing new SI unit class</h2>
+<p>Add an new unit class is very simple. The code is as following:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">joule</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;joule&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;symbol&quot;</span><span class="p">:</span><span class="s2">&quot;J&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;express_by_SI_base&quot;</span><span class="p">:</span><span class="s2">&quot;kg*m+2*s-2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;express_by_SI&quot;</span><span class="p">:</span><span class="s2">&quot;N*m&quot;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>This class is the primary class of the physical quantity type, and other unit classes are related to this class. For example, it is the basis for automatically generating prefix unit classes, and it is also a transitional unit class for unit conversion. Most of the time, it is the coherent unit of the SI unit system. But there are exceptions. For example, in the unit of mass, g is the primary unit, but it is not the coherent unit selected by SI unit system. The coherent unit is kg.</p>
+<p>For the unit class added in the new design, Physical Quantity Calculating does not know its name, symbol, and how to express it in the basic unit of the SI unit system and the derived unit with a specific name, so it needs to provide a reference when designing. This reference is placed in its class variable profile. It needs to be set as a dict object. Its four keys respectively represent the name and symbol of the primary unit, the expression in the basic unit, and the expression in the basic unit and the derived unit with a specific name.</p>
+<p>The value corresponding to each key is determined by the unit. If the unit does not have this value, it is an empty string. If so, it needs to be delivered to Physical Quantity Calculating according to the following principles:</p>
+<ol>
+<li>
+<p>The name or symbol and power exponent of each unit must be separated by +, -, * and /.</p>
+</li>
+<li>
+<p>The division sign specified by the SI unit system is still separated by the division sign, such as m/s. If the division sign is not specified, it is separated by a multiplication sign, such as kg*m in joule class.</p>
+</li>
+<li>
+<p>A symbol and its power exponent are separated by plus and minus signs. The plus sign represents a positive power exponent, and the minus sign represents a negative power exponent. For example, m+2 in the joule class.</p>
+</li>
+<li>
+<p>The power exponent of the previous symbol and the next symbol are separated by a multiplication sign. For example, 2*s in the joule class.</p>
+</li>
+<li>
+<p>There must be no spaces before and after the symbol or the two expression strings.</p>
+</li>
+</ol>
+<p>Therefore, in the joule class, its symbol is J. And it needs to be written as kg*m+2*s-2 when expressed in the basic unit of the SI unit system, and as N*m when expressed in the basic unit and unit with specific name. Their real expressions would be <span class="arithmatex">\(kg\cdot m^{2}\cdot s^{-2}\)</span> and <span class="arithmatex">\(N\cdot m\)</span>(This display is the display of Latex on the web page. If you use html display, it will be kg·m<sup>2</sup>·s<sup>-2</sup>). Of course, the expression method m/s stipulated by the SI unit system will still be retained.</p>
+<h2 id="design-non-si-unit-class">Design non-SI unit class</h2>
+<p>There is no fundamental difference between designing non-SI units and designing SI units. However, the conversion relationship between non-SI units and SI primary units is not necessarily a proportional relationship. For example, the relationship between the thermodynamic temperature unit kevin and celsius　degree is a linear relationship rather than a simple proportional relationship. So when designing a non-SI unit, you need to override two methods <code class="highlight"><span class="n">to_pri_unit</span></code> and <code class="highlight"><span class="n">from_pri_unit</span></code>. The following is an example.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">celsius_degree</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;celsius degree&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;symbol&quot;</span><span class="p">:</span><span class="s2">&quot;°&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;express_by_SI_base&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;express_by_SI&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span>
+    <span class="p">}</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">to_pri_unit</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span> <span class="o">+</span> <span class="mf">273.15</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_pri_unit</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span> <span class="o">-</span> <span class="mf">273.15</span>
+
+<span class="k">class</span> <span class="nc">fahrenheit_degree</span><span class="p">(</span><span class="n">Unit</span><span class="p">):</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;fahrenheit degree&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;symbol&quot;</span><span class="p">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;express_by_SI_base&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;express_by_SI&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span>
+    <span class="p">}</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">to_pri_unit</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">value</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">+</span> <span class="mf">273.15</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_pri_unit</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">9</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">value</span> <span class="o">-</span><span class="mf">273.15</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="design-unit-conversion-relationship">Design unit conversion relationship</h2>
+<p>If you want to establish a conversion relationship between each unit, the workload is huge and difficult to complete. It should be particularly pointed out here that the method of establishing the conversion between each pair of units in the Physical Quantity Calculating class library uses the analysis pattern of Martin Fowler. For details, see the pattern of Figure 3.3 in <a href="https://martinfowler.com/apsupp/apchap3.pdf">UML Diagrams for Chapter 3 of Analysis Patterns</a></p>
+<h2 id="design-new-quantity-type">Design new quantity type</h2>
+<p>The design of a new quantity type needs to inherit the class QuantityType. For example, to design EnergyType, the code is as follows:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">EnergyType</span><span class="p">(</span><span class="n">QuantityType</span><span class="p">):</span>
+    <span class="n">pri_unit</span> <span class="o">=</span> <span class="n">joule</span>
+    <span class="n">SI_conherent_unit</span> <span class="o">=</span> <span class="n">pri_unit</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">register_type</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">source</span><span class="p">[(</span><span class="n">ForceType</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">LengthType</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">cls</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">source</span><span class="p">[(</span><span class="n">LengthType</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">ForceType</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">cls</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">source</span><span class="p">[(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">ForceType</span><span class="p">)]</span> <span class="o">=</span> <span class="n">LengthType</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">source</span><span class="p">[(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">LengthType</span><span class="p">)]</span> <span class="o">=</span> <span class="n">ForceType</span>
+<span class="hll">    <span class="nd">@classmethod</span>
+</span><span class="hll">    <span class="k">def</span> <span class="nf">register_type</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+</span><span class="hll">        <span class="k">pass</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>In the class design of this physical quantity, the first thing we have to set is its primary unit. In this EnergyType class, it is the class joule that we designed in the previous section. So we set the class variable <code class="highlight"><span class="n">pri_unit</span></code> of the EnergyType class equals <code class="highlight"><span class="n">joule</span></code>.EnergyType will generate its corresponding prefixed unit based on this unit. Similarly, it is also a transitional unit for unit conversion. We will discuss this point below.</p>
+<p>The second class variable that needs to be set in the EnergyType class is <code class="highlight"><span class="n">SI_coherent_unit</span></code>. It is the coherent unit of the SI unit. In the physical quantity of the EnergyType type, this unit is its primay. So we set <code class="highlight"><span class="n">SI_coherent_unit</span> <span class="o">=</span> <span class="n">pri_unit</span></code>. It should be noted that in the SI unit system, most of the primary units of physical quantities are consistent with the coherent units of the SI unit system. But there are exceptions. For example, the primary unit of MassType is g instead of kg. But kg is the basic unit of SI, and it is also a coherent unit.</p>
+<p>When the class QuantityType is inherited for designing a new physical quantity type, a key class method <code class="highlight"><span class="n">register_type</span></code> needs to be overridden. In QuantityType, this method is designed to throw NotImplementedError, the purpose is to remind programmers who inherit this class to override this method. This method needs to determine the multiplication and division relationship between related physical quantities, and this is the basis for the automatic generation of physical quantities by Physical Quantity Calculating.</p>
+<p>The overriding class method <code class="highlight"><span class="n">register_type</span></code> method determines that the quantity type can be obtained by multiplying or dividing the two other types. For example, the definition of EnergyType is the work done by force through a certain displacement, so it can be considered to be obtained by multiplying ForceType by LengthType. Therefore, in this method, the corresponding item should be added to the source dictionary of the class variable.</p>
+<p>The key to be added to the dictionary is a tuple. The tuple consists of two classes of physical quantity types and the corresponding multiplication or division signs. For example, EnergyType is obtained by multiplying ForceType and LengthType, so its key is composed of tuples <code class="highlight"><span class="p">(</span><span class="n">ForceType</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">LengthType</span><span class="p">)</span></code>. And its value is EnergyType. Therefore, when overriding the class method register_type, first add this value to the source dictionary, that is, the code:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="bp">cls</span><span class="o">.</span><span class="n">source</span><span class="p">[(</span><span class="n">ForceType</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">LengthType</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">cls</span>
+</span><span class="bp">cls</span><span class="o">.</span><span class="n">source</span><span class="p">[(</span><span class="n">LengthType</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">ForceType</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">cls</span>
+<span class="bp">cls</span><span class="o">.</span><span class="n">source</span><span class="p">[(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">ForceType</span><span class="p">)]</span> <span class="o">=</span> <span class="n">LengthType</span>
+<span class="bp">cls</span><span class="o">.</span><span class="n">source</span><span class="p">[(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">LengthType</span><span class="p">)]</span> <span class="o">=</span> <span class="n">ForceType</span>
+</code></pre></div>
+</td></tr></table>
+<p>When overriding the register_type method, add as many meaningful operations as possible to the dictionary specified by source. For example, in the design of EnergyType, in addition to the first sentence expressing the definition of EnergyType, the second sentence also expresses its definition. The corresponding EnergyType and the division results of LengthType and ForceType are also meaningful, so write them separately into the dictionary pointed to by source. In this way, when applying Physical Quantity Calculating, when these four situations are encountered, the physical quantity type of the operation result can be determined.</p>
+<p>In particular, it should be noted that in the design of QuantityType, the class variable source points to an empty dictionary. The source of its subclasses will also point to this dictionary. Each subclass will register for itself the result type of many operations in this dictionary. And in actual operation, the corresponding operation result type will be searched from this dictionary. Therefore, it is strictly forbidden for any subclass to set another dictionary for the source. Otherwise, even if the corresponding physical quantity type has been registered during the design, an error may still be thrown during the calculation process because it cannot be found.Details can be seen in the highlighted part of the aforementioned EnergyType design code snippet</p>
+<p>If certain subclasses do not need to specifically register certain operations, they must also override the class method register_type to prevent NotImplemenedError from being thrown. See the design of <a href="https://github.com/chenmich/Quantities/blob/master/quantities/length.py">LengthType</a>.</p>
+<p>When designing a new quantity type, it must also be associated with its non-SI units. For example, when designing the quantity type of thermodynamic temperature, it is necessary to associate the class celsius_degree and the class fahrenheit_degree. After the association, the user can call its non-SI unit through this quantity type.The details can be seen in the following example.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ThermodynamicTemperatureType</span><span class="p">(</span><span class="n">QuantityType</span><span class="p">):</span>
+    <span class="n">pri_unit</span> <span class="o">=</span> <span class="n">K</span>
+    <span class="n">SI_conherent_unit</span> <span class="o">=</span> <span class="n">pri_unit</span>
+<span class="hll">    <span class="n">celsius_degree</span> <span class="o">=</span>  <span class="n">celsius_degree</span>
+</span><span class="hll">    <span class="n">fahrenheit_degree</span> <span class="o">=</span> <span class="n">fahrenheit_degree</span>
+</span>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">register_type</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="k">pass</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="designed-physical-quantity-in-the-system">Designed physical quantity in the system</h2>
+<p>When this system was released, most of the physical quantity types had been designed based on the content of SI. <a href="https://github.com/chenmich/Quantities/blob/master/quantities/__init__.py">Details</a> can be seen in the contents of the software package.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Usage/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Usage
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../API%20Reference/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              API Reference
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
