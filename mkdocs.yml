@@ -1,6 +1,6 @@
 site_name: Physical Quantity Calculating
 nav:
-    - Overview: Overview.md
+    - index: index.md
     - Quantity Model: Quantity_Model.md
     - Quickstart: Quickstart.md
     - Usage: Usage.md
