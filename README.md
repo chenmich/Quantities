@@ -12,12 +12,12 @@ The Physical Quantities Calculating class library is developed in the Python 3.8
 
 ## Install
 
-### install frow PyPi  
+### install from PyPi  
 
 pip install quantities
 
-### download from github  
-
+### download source from github
+[Quantities](https://github.com/chenmich/Quantities)
 ## Version
 
 current version:    0.1.0
