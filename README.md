@@ -17,10 +17,16 @@ The Physical Quantities Calculating class library is developed in the Python 3.8
 pip install quantities
 
 ### download source from github
+
 [Quantities](https://github.com/chenmich/Quantities)
+
 ## Version
 
 current version:    0.1.0
+
+## Documentation
+
+[Documentation](https://chenmich.github.io/Quantities/Overview.html)
 
 ## Usage
 
