@@ -14,7 +14,7 @@ The Physical Quantities Calculating class library is developed in the Python 3.8
 
 ### install frow PyPi
 
-pip install quantities
+pip install Physical-Quantity-calculating
 
 ### download
 
