@@ -26,7 +26,7 @@ current version:    0.1.0
 
 ## Documentation
 
-[Documentation](https://chenmich.github.io/Quantities/Overview.html)
+[Documentation](https://chenmich.github.io/Quantities)
 
 ## Usage
 
